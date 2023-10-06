@@ -22,7 +22,6 @@ import audit2 from './svg/audit_2.svg';
 import EXCHANGE from './svg/exchange.svg';
 import MARKETPLACE from './svg/marketplace.svg';
 
-import mdRoadmap from './md_roadmap.png';
 import desktopRoadmap from './desktop_roadmap.png';
 import BG_OFFICIAL from './svg/background_offical.svg';
 import CERTIK_LOGO from './certik_logo.png';
@@ -82,7 +81,6 @@ const icons = {
         mediumFooter,
         githubIcon,
     },
-    mdRoadmap,
     desktopRoadmap,
     BG_OFFICIAL,
     CERTIK_LOGO,

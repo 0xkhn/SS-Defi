@@ -42,11 +42,8 @@ const RoadmapDesktop = () => {
     };
     return (
         <div className="relative h-[265px] min-w-[648px] min-[1440px]:h-[412px] min-[1440px]:min-w-[1220px]">
-            <div className="hidden min-[1440px]:flex absolute flex h-full items-center">
-                <img src={icons.desktopRoadmap} alt="roadmap" className="w-full" />
-            </div>
-            <div className="min-[1440px]:hidden absolute flex h-full items-center">
-                <img src={icons.mdRoadmap} alt="roadmap" className="w-full" />
+            <div className="flex absolute flex h-full items-center">
+                <img src={icons.desktopRoadmap} alt="roadmap_desktop" className="w-full" />
             </div>
             <div className="flex flex-col justify-between h-full w-full min-[1440px]:gap-[65px]">
                 <div className="flex justify-center gap-[106px] min-[1440px]:gap-[360px]">

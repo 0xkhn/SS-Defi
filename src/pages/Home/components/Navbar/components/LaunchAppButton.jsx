@@ -4,7 +4,7 @@ import LaunchAppModal from './LaunchAppModal';
 
 export default function LaunchAppButton({ styleButton, styleTitle, onClick }) {
     return (
-        <Tooltip placement="bottom" title={<LaunchAppModal />}>
+        <Tooltip placement="bottom" showArrow={false} title={<LaunchAppModal />}>
             <button
                 style={{
                     background: 'linear-gradient(135deg, #24C3BC 0%, #ADFFFB 100%)',

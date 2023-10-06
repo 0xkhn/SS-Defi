@@ -33,7 +33,7 @@ const HomepageFooterMobile = (props) => {
                 <div className="hidden md:flex justify-between">
                     <FooterBarLeft />
                     <FooterBarRight />
-                    <div className="flex flex-col gap-[10px] justify-end">
+                    <div className="flex flex-col gap-[10px] justify-center">
                         <div className="whitespace-nowrap font-['Roboto'] text-[16px] font-bold text-white">
                             Community
                         </div>
@@ -62,7 +62,7 @@ const HomepageFooterDesktop = () => {
                 <div className="flex gap-[60px]">
                     <FooterBarLeft />
                     <FooterBarRight />
-                    <div className="flex flex-col gap-[10px] justify-end">
+                    <div className="flex flex-col gap-[10px] justify-center">
                         <div className="whitespace-nowrap font-['Roboto'] text-[16px] font-bold text-white">
                             Community
                         </div>
@@ -95,14 +95,14 @@ const FooterBarLeft = () => {
         },
     ];
     return (
-        <div className="flex flex-col justify-center items-start gap-[20px]">
+        <div className="flex flex-col justify-center items-start gap-[20px] md:gap-[10px] min-[1440px]:gap-[16px]">
             {itemListLeft.map((item, idx) => (
                 <AnchorLink
                     href={item.href}
                     key={idx}
-                    className="whitespace-nowrap font-['Roboto'] text-[16px] font-bold text-white"
+                    className="button-navbar-hover whitespace-nowrap font-['Roboto'] text-[16px] font-bold text-white py-[12px] px-[20px] rounded-[16px]"
                 >
-                    {item.title}
+                    <div className="text-white">{item.title}</div>
                 </AnchorLink>
             ))}
         </div>
@@ -121,14 +121,14 @@ const FooterBarRight = () => {
         },
     ];
     return (
-        <div className="flex flex-col justify-center items-start gap-[20px]">
+        <div className="flex flex-col justify-center items-start gap-[20px] md:gap-[10px] min-[1440px]:gap-[16px]">
             {itemListRight.map((item, idx) => (
                 <AnchorLink
                     href={item.href}
                     key={idx}
-                    className="whitespace-nowrap font-['Roboto'] text-[16px] font-bold text-white"
+                    className="button-navbar-hover whitespace-nowrap font-['Roboto'] text-[16px] font-bold text-white py-[12px] px-[20px] rounded-[16px]"
                 >
-                    {item.title}
+                    <div className="text-white">{item.title}</div>
                 </AnchorLink>
             ))}
         </div>

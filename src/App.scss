@@ -7,6 +7,10 @@
 // @import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+body::-webkit-scrollbar-thumb {
+    background-color: #24c3bc;
+}
+
 .wrapper-footer {
     max-width: 1600px;
     margin: auto;
@@ -45,10 +49,11 @@
 }
 
 .button-navbar-hover:hover {
-    transition: all 0.05s ease-in-out;
+    transition: background 0.05s ease-in-out;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    a {
+    div {
+        transition: color 0.3s ease-in-out;
         color: #24c3bc !important;
     }
 }
@@ -57,16 +62,16 @@
     transition: all 0.8s ease-in-out;
 }
 
-// .card-hover {
-//     border: 2px solid #24c3bc;
-//     border-radius: 24px;
-//     background: linear-gradient(0deg, #0b4c51 0%, #07051b 65.63%, #07051b 100%);
-// }
-
 .card-hover:hover img {
     transition: all 0.8s ease-in-out;
     -webkit-filter: drop-shadow(0px 0px 15px rgba(36, 195, 188, 1));
     filter: drop-shadow(0px 0px 15px rgba(36, 195, 188, 1));
+}
+
+.partner-card:hover {
+    transition: all 0.6s ease-in-out;
+    border: 1px solid #24c3bc;
+    box-shadow: 0px 0px 25px 0px #24c3bc;
 }
 
 .social-button-hover:hover {

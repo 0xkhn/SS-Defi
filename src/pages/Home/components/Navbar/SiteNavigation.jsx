@@ -28,7 +28,7 @@ const MobileSiteNavigation = () => {
                 {({ open }) => (
                     <>
                         <div className="flex items-center">
-                            <Logo className="h-[30px]" />
+                            <Logo className="h-[30px] w-[141.388px]" />
                         </div>
                         <div className="flex items-center gap-3">
                             <LaunchAppButton />
@@ -90,7 +90,7 @@ const DesktopSiteNavigation = (props) => {
             className="fixed top-0 z-[1000] flex h-[96px] w-screen justify-between px-[120px] py-[24px] backdrop-blur-[30px]"
         >
             <div className="flex items-center">
-                <Logo className="h-[48px]" />
+                <Logo className="h-[48px] w-[212.082px]" />
             </div>
             <div className="hidden items-center text-[20px] font-bold md:flex md:gap-[5px] lg:gap-[20px]">
                 <AnchorLink
