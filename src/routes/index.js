@@ -1,24 +1,24 @@
 import {
     ComingSoonPage,
-    FarmsPage,
+    // FarmsPage,
     LiquidityPage,
     NFTPage,
-    PoolsPage,
+    // PoolsPage,
     SwapPage,
-    LendingPage,
-    AirdropPage,
-    InfoPage,
+    // LendingPage,
+    // AirdropPage,
+    // InfoPage,
     FaucetPage,
 } from '../pages';
-import TestnetTokenPage from '../pages/ClaimTestnetToken';
+// import TestnetTokenPage from '../pages/ClaimTestnetToken';
 import HomePage from '../pages/Home';
-import HomePageV2 from '../pages/HomeV2';
-import HomePageV3 from '../pages/HomeV3';
+// import HomePageV2 from '../pages/HomeV2';
+// import HomePageV3 from '../pages/HomeV3';
 import PrivateSalePage from '../pages/PrivateSale';
 import { route } from './configs';
 
 const publicRoutes = [
-    { path: route.home, element: HomePageV3 },
+    { path: route.home, element: HomePage },
     { path: route.nft, element: NFTPage },
     // { path: route.airdrop, element: AirdropPage },
     { path: route.privatesale, element: PrivateSalePage },

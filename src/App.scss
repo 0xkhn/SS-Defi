@@ -1,3 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Changa:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
 .content-wrapper {
     background-image: url('../src/assets/image/bg-home.png');
     background-size: 100% 100%;
@@ -15,4 +23,79 @@
     height: 100%;
     background-color: #00000080;
     z-index: -1;
+}
+
+.text-gradient {
+    background: var(--primary-gradientcolor, linear-gradient(135deg, #24c3bc 0%, #adfffb 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.button-hover-1:hover {
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0px 0px 25px 0px #24c3bc;
+}
+
+.button-hover-2:hover {
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, 0.5);
+}
+
+.button-hover-3:hover {
+    transition: all 0.4s ease-in-out;
+    border: 2px solid var(#24c3bc);
+    background: rgba(36, 195, 188, 0.2);
+}
+
+.button-navbar-hover:hover {
+    transition: all 0.05s ease-in-out;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    a {
+        color: #24c3bc !important;
+    }
+}
+
+.card-hover img {
+    transition: all 0.8s ease-in-out;
+}
+
+.card-hover:hover img {
+    transition: all 0.8s ease-in-out;
+    /* box-shadow: 0px 0px 25px 0px #24c3bc; */
+    -webkit-filter: drop-shadow(0px 0px 25px rgba(36, 195, 188, 0.35));
+    filter: drop-shadow(0px 0px 25px rgba(36, 195, 188, 0.35));
+    transform: scale(1.1);
+}
+
+.social-button-hover:hover {
+    background: #24c3bc !important;
+    box-shadow: 0px 0px 25px 0px #24c3bc;
+}
+
+.linear-background {
+    @media screen and (min-width: 1440px) {
+        background: linear-gradient(90deg, #0b4c51 0%, #07051b 65.62%, #07051b 100%);
+    }
+}
+
+.about-linear-background {
+    @media screen and (min-width: 768px) {
+        background: linear-gradient(0deg, #0b4c51 0%, #07051b 65.63%, #07051b 100%);
+    }
+
+    @media screen and (min-width: 1440px) {
+        background: linear-gradient(90deg, #0b4c51 0%, #07051b 65.62%, #07051b 100%);
+    }
+}
+
+.ant-dropdown {
+    top: 100px !important;
+}
+
+.ant-tooltip-inner {
+    padding: 0px !important;
+    margin-top: 10px !important;
+    border-radius: 20px !important;
 }

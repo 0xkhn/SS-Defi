@@ -6,13 +6,16 @@ import { StarknetConfig, InjectedConnector } from '@starknet-react/core';
 import React, { useState, useEffect } from 'react';
 import FooterLayout from './layouts/v2/Footer';
 import Footer from './layouts/Footer';
-
 import { useEagerConnect } from './evm/hooks/useEagerConnect';
 import { useInactiveListener } from './evm/hooks/useInactiveListener';
 import { Web3Provider } from '@ethersproject/providers';
 import { useWeb3React, Web3ReactProvider } from '@web3-react/core';
 import { useDispatch, useSelector } from 'react-redux';
 import actions from './redux/action';
+import SiteNavigation from './pages/Home/components/Navbar/SiteNavigation';
+import HomepageFooter from './pages/Home/components/Footer/Footer';
+import icons from './assets/icons';
+import { useLocationPath } from './hooks/useLocationPath';
 
 function getLibrary(provider) {
     const library = new Web3Provider(provider);
@@ -42,7 +45,7 @@ function useWindowSize() {
 
 const App = () => {
     console.clear();
-
+    const currentPath = useLocationPath();
     const dispatch = useDispatch();
 
     const isEvm = useSelector((state) => state.isEvm);
@@ -63,7 +66,7 @@ const App = () => {
     const triedEager = useEagerConnect();
     useInactiveListener(!triedEager || !!activatingConnector);
 
-    const size = useWindowSize();
+    // const size = useWindowSize();
     const connectors = [
         new InjectedConnector({ options: { id: 'braavos' } }),
         new InjectedConnector({ options: { id: 'argentX' } }),
@@ -71,16 +74,29 @@ const App = () => {
 
     return (
         <StarknetConfig connectors={connectors}>
-            <Router>
-                <div className="content-wrapper">
-                    <HeaderLayout />
+            <div
+                style={
+                    currentPath === '/'
+                        ? {
+                              background: `url(${icons.BG_OFFICIAL})`,
+                              backgroundSize: 'cover',
+                              backgroundRepeat: 'no-repeat',
+                              backgroundAttachment: 'fixed',
+                          }
+                        : { backgroundImage: "url('../src/assets/image/bg-home.png')", backgroundSize: '100% 100%' }
+                }
+            >
+                {currentPath === '/' ? <SiteNavigation /> : <HeaderLayout />}
 
-                    <Routes>
-                        {publicRoutes.map((route, index) => {
-                            const Page = route.element;
-                            return <Route key={index} path={route.path} element={<Page />}></Route>;
-                        })}
-                    </Routes>
+                <Routes>
+                    {publicRoutes.map((route, index) => {
+                        const Page = route.element;
+                        return <Route key={index} path={route.path} element={<Page />}></Route>;
+                    })}
+                </Routes>
+                {currentPath === '/' ? (
+                    <HomepageFooter />
+                ) : (
                     <div style={{ position: 'relative' }}>
                         <div className="overlay-footer"></div>
                         <div className="wrapper-footer">
@@ -88,8 +104,8 @@ const App = () => {
                             <FooterLayout />
                         </div>
                     </div>
-                </div>
-            </Router>
+                )}
+            </div>
         </StarknetConfig>
     );
 };
@@ -98,7 +114,9 @@ const App = () => {
 export default function () {
     return (
         <Web3ReactProvider getLibrary={getLibrary}>
-            <App />
+            <Router>
+                <App />
+            </Router>
         </Web3ReactProvider>
     );
 }
