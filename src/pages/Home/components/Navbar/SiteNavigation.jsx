@@ -69,7 +69,10 @@ const MobileSiteNavigation = () => {
                                         >
                                             Ecosystem
                                         </a>
-                                        <a className="text-[16px] font-medium text-white md:text-[14px]" href="#backed">
+                                        <a
+                                            className="text-[16px] font-medium text-white md:text-[14px]"
+                                            href="#partner"
+                                        >
                                             Backers & Partners
                                         </a>
                                     </div>
@@ -112,7 +115,7 @@ const DesktopSiteNavigation = (props) => {
                     <div className="text-white">Ecosystem</div>
                 </AnchorLink>
                 <AnchorLink
-                    href="#backed"
+                    href="#partner"
                     className="button-navbar-hover flex w-fit cursor-pointer items-center font-['Roboto'] text-[16px] md:text-[12px] min-[1000px]:text-[16px] font-bold text-white max-[815px]:hidden px-[20px] py-[12px]"
                 >
                     <div className="text-white">Backers & Partners</div>

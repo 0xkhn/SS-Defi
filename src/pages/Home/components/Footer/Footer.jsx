@@ -117,7 +117,7 @@ const FooterBarRight = () => {
         },
         {
             title: 'Backers & Partners',
-            href: '#backed',
+            href: '#partner',
         },
     ];
     return (

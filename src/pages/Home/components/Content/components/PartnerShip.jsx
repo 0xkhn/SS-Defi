@@ -3,14 +3,15 @@ import { HeaderComponent } from './HeaderComponent';
 
 export default function PartnerShip() {
     return (
-        <div className="flex flex-col gap-[40px] md:mx-[60px] min-[1440px]:mx-[120px] min-[1440px]:max-w-[1200px] min-[1440px]:gap-[80px]">
-            <HeaderComponent id="backed" title="PARTNERSHIP" subTitle="Our Partners & Collabs" />
+        <div className="relative flex flex-col gap-[40px] md:mx-[60px] min-[1440px]:mx-[120px] min-[1440px]:max-w-[1200px] min-[1440px]:gap-[80px]">
+            <HeaderComponent title="PARTNERSHIP" subTitle="Our Partners & Collabs" />
             <div className="min-[1440px]:hidden">
                 <ParterContentMobile />
             </div>
             <div className="hidden min-[1440px]:flex">
                 <PartnerContentDesktopLagest />
             </div>
+            <div id="partner" className="absolute top-[-140px]"></div>
         </div>
     );
 }
