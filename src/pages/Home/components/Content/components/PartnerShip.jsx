@@ -4,14 +4,11 @@ import { HeaderComponent } from './HeaderComponent';
 export default function PartnerShip() {
     return (
         <div className="flex flex-col gap-[40px] md:mx-[60px] min-[1440px]:mx-[120px] min-[1440px]:max-w-[1200px] min-[1440px]:gap-[80px]">
-            <HeaderComponent title="PARTNERSHIP" subTitle="Our Partners & Collabs" />
+            <HeaderComponent id="backed" title="PARTNERSHIP" subTitle="Our Partners & Collabs" />
             <div className="min-[1440px]:hidden">
                 <ParterContentMobile />
             </div>
-            <div className="hidden min-[1440px]:flex min-[1920px]:!hidden">
-                <PartnerContentDesktop />
-            </div>
-            <div className="hidden min-[1920px]:flex">
+            <div className="hidden min-[1440px]:flex">
                 <PartnerContentDesktopLagest />
             </div>
         </div>
@@ -72,7 +69,7 @@ const ParterContentMobile = () => {
 const PartnerContentDesktop = () => {
     return (
         <div className="inline-flex max-w-[1200px] flex-wrap content-center items-center justify-center gap-[40px]">
-            {partners.map((item, idx) => (
+            {partnersFull.map((item, idx) => (
                 <SponserCardMockup key={idx} icon={item} />
             ))}
         </div>

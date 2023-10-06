@@ -3,7 +3,7 @@ import { HeaderComponent } from './HeaderComponent';
 
 export default function About() {
     return (
-        <div id="about">
+        <div>
             <div className="min-[1440px]:hidden">
                 <AboutUsMobile />
             </div>
@@ -16,7 +16,10 @@ export default function About() {
 
 const AboutUsDesktop = () => {
     return (
-        <div className="about-linear-background mx-[120px] flex w-[1200px] p-[60px] flex-row gap-[20px] rounded-[24px] border-[0.5px] border-[#24C3BC]">
+        <div
+            id="about"
+            className="about-linear-background mx-[120px] flex w-[1200px] p-[60px] flex-row gap-[20px] rounded-[24px] border-[0.5px] border-[#24C3BC]"
+        >
             <div className="flex max-w-[540px] flex-col justify-between gap-[20px]">
                 <div className="flex flex-col gap-[24px]">
                     <HeaderComponent

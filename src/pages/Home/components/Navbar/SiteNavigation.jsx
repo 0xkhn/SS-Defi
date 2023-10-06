@@ -93,27 +93,30 @@ const DesktopSiteNavigation = (props) => {
                 <Logo className="h-[48px]" />
             </div>
             <div className="hidden items-center text-[20px] font-bold md:flex md:gap-[5px] lg:gap-[20px]">
-                <div className="button-navbar-hover flex w-fit cursor-pointer items-center font-['Roboto'] text-[16px] md:text-[12px] min-[1000px]:text-[16px] font-bold text-white max-[815px]:hidden px-[20px] py-[12px]">
-                    <AnchorLink className="text-white" href="#about">
-                        About
-                    </AnchorLink>
-                </div>
-                <div className="button-navbar-hover flex w-fit cursor-pointer items-center font-['Roboto'] text-[16px] md:text-[12px] min-[1000px]:text-[16px] font-bold text-white max-[815px]:hidden px-[20px] py-[12px]">
-                    <AnchorLink className="text-white" href="#features">
-                        Features
-                    </AnchorLink>
-                </div>
-                <div className="button-navbar-hover flex w-fit cursor-pointer items-center font-['Roboto'] text-[16px] md:text-[12px] min-[1000px]:text-[16px] font-bold text-white max-[815px]:hidden px-[20px] py-[12px]">
-                    <AnchorLink className="text-white" href="#ecosystem">
-                        Ecosystem
-                    </AnchorLink>
-                </div>
-                <div className="button-navbar-hover flex w-fit cursor-pointer items-center font-['Roboto'] text-[16px] md:text-[12px] min-[1000px]:text-[16px] font-bold text-white max-[815px]:hidden px-[20px] py-[12px]">
-                    <AnchorLink className="text-white" href="#backed">
-                        {' '}
-                        Backers & Partners
-                    </AnchorLink>
-                </div>
+                <AnchorLink
+                    href="#about"
+                    className="button-navbar-hover flex w-fit cursor-pointer items-center font-['Roboto'] text-[16px] md:text-[12px] min-[1000px]:text-[16px] font-bold text-white max-[815px]:hidden px-[20px] py-[12px]"
+                >
+                    <div className="text-white">About</div>
+                </AnchorLink>
+                <AnchorLink
+                    href="#features"
+                    className="button-navbar-hover flex w-fit cursor-pointer items-center font-['Roboto'] text-[16px] md:text-[12px] min-[1000px]:text-[16px] font-bold text-white max-[815px]:hidden px-[20px] py-[12px]"
+                >
+                    <div className="text-white">Features</div>
+                </AnchorLink>
+                <AnchorLink
+                    href="#ecosystem"
+                    className="button-navbar-hover flex w-fit cursor-pointer items-center font-['Roboto'] text-[16px] md:text-[12px] min-[1000px]:text-[16px] font-bold text-white max-[815px]:hidden px-[20px] py-[12px]"
+                >
+                    <div className="text-white">Ecosystem</div>
+                </AnchorLink>
+                <AnchorLink
+                    href="#backed"
+                    className="button-navbar-hover flex w-fit cursor-pointer items-center font-['Roboto'] text-[16px] md:text-[12px] min-[1000px]:text-[16px] font-bold text-white max-[815px]:hidden px-[20px] py-[12px]"
+                >
+                    <div className="text-white">Backers & Partners</div>
+                </AnchorLink>
             </div>
             <div className="flex items-center gap-3">
                 <LaunchAppButton styleButton="py-[12px] px-[24px] rounded-[16px] h-[48px] w-[175px]" />

@@ -2,10 +2,7 @@ import { HeaderComponent } from './HeaderComponent';
 
 export default function Backed() {
     return (
-        <div
-            id="backed"
-            className="linear-background flex flex-col gap-[30px] md:gap-[60px] md:mx-[60px] min-[1440px]:mx-[98px] min-[1440px]:max-w-[1244px] min-[1440px]:gap-20 min-[1440px]:rounded-3xl min-[1440px]:border-[0.5px] min-[1440px]:border-[#C6C6C6] min-[1440px]:px-[42px] min-[1440px]:py-20"
-        >
+        <div className="linear-background flex flex-col gap-[30px] md:gap-[60px] md:mx-[60px] min-[1440px]:mx-[98px] min-[1440px]:max-w-[1244px] min-[1440px]:gap-20 min-[1440px]:rounded-3xl min-[1440px]:border-[0.5px] min-[1440px]:border-[#C6C6C6] min-[1440px]:px-[42px] min-[1440px]:py-20">
             <HeaderComponent title="BACKED" subTitle="Our Backers & Investors" />
             <BackedContent />
         </div>
