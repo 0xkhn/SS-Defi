@@ -17,7 +17,6 @@ export default function MainContentHomepage() {
                 <Ecosystem />
                 <Audit />
                 <OurRoadmap />
-                {/* <Backed /> */}
                 <PartnerShip />
             </div>
         </div>

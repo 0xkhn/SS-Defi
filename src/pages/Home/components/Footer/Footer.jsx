@@ -30,7 +30,7 @@ const HomepageFooterMobile = (props) => {
                 <div className="flex justify-center md:!hidden">
                     <SocialCard />
                 </div>
-                <div className="hidden md:flex justify-between">
+                <div className="hidden md:flex justify-between ml-[-20px]">
                     <FooterBarLeft />
                     <FooterBarRight />
                     <div className="flex flex-col gap-[10px] justify-center">
@@ -100,7 +100,7 @@ const FooterBarLeft = () => {
                 <AnchorLink
                     href={item.href}
                     key={idx}
-                    className="button-navbar-hover whitespace-nowrap font-['Roboto'] text-[16px] font-bold text-white py-[12px] px-[20px] rounded-[16px] md:pl-0"
+                    className="button-navbar-hover whitespace-nowrap font-['Roboto'] text-[16px] font-bold text-white py-[12px] px-[20px] rounded-[16px]"
                 >
                     <div className="text-white">{item.title}</div>
                 </AnchorLink>
@@ -126,7 +126,7 @@ const FooterBarRight = () => {
                 <AnchorLink
                     href={item.href}
                     key={idx}
-                    className="button-navbar-hover whitespace-nowrap font-['Roboto'] text-[16px] font-bold text-white py-[12px] px-[20px] rounded-[16px] md:pl-0"
+                    className="button-navbar-hover whitespace-nowrap font-['Roboto'] text-[16px] font-bold text-white py-[12px] px-[20px] rounded-[16px]"
                 >
                     <div className="text-white">{item.title}</div>
                 </AnchorLink>

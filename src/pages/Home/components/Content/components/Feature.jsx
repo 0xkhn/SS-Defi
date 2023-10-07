@@ -3,7 +3,7 @@ import { HeaderComponent } from './HeaderComponent';
 
 export default function Feature() {
     return (
-        <div className="relative flex flex-col gap-[30px] md:mx-[98px] min-[1200px]:gap-[80px]">
+        <div className="relative flex flex-col gap-[30px] min-[1200px]:gap-[80px]">
             <HeaderComponent title="FEATURES" subTitle="OUR FEATURES" />
             <FeatureCard />
             <div id="features" className="absolute top-[-200px]"></div>
@@ -36,7 +36,7 @@ const FeatureCard = () => {
     ];
 
     return (
-        <div className="flex flex-wrap justify-center items-center gap-[30px] min-[1200px]:grid min-[1200px]:grid-cols-2 min-[1200px]:max-w-[1200px] min-[1200px]:gap-[40px] min-[1440px]:grid min-[1440px]:grid-cols-4">
+        <div className="flex flex-wrap justify-center items-center gap-[30px] md:w-[768px] min-[1200px]:w-[960px] min-[1200px]:gap-[40px] min-[1440px]:w-[1200px] min-[1440px]:grid min-[1440px]:grid-cols-4">
             {featureCardItems.map((item, idx) => (
                 <div
                     className="relative flex h-[345px] w-[350px] items-end md:max-w-[309px] min-[1200px]:max-w-[270px]"

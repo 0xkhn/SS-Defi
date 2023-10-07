@@ -30,7 +30,7 @@ const MobileSiteNavigation = () => {
                         <div className="flex items-center">
                             <Logo className="h-[30px] w-[141.388px] md:h-[48px] md:w-[212.082px]" />
                         </div>
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-[30px]">
                             <LaunchAppButton styleButton="py-[12px] px-[24px] rounded-[16px] h-[48px] w-[175px]" />
                             <MobileMenuButton open={open} />
                         </div>
@@ -54,7 +54,7 @@ const MobileSiteNavigation = () => {
                                 }}
                             >
                                 <div className="stroke-secondary flex flex-col gap-[32px] py-[30px] px-[24px] md:px-[60px]">
-                                    <div className="flex flex-col gap-[32px]">
+                                    <div className="flex flex-col gap-[30px]">
                                         <AnchorLink
                                             className="text-[16px] font-['Roboto'] font-medium text-white text-right"
                                             href="#about"

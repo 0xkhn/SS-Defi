@@ -7,8 +7,6 @@ import telegramFooter from './svg/footer/telegram.svg';
 import discordFooter from './svg/footer/discord.svg';
 import twitterFooter from './svg/footer/twitter.svg';
 import mediumFooter from './svg/footer/medium.svg';
-import mobileMenuIcon from './svg/MobileMenu.svg';
-import xMarkIcon from './svg/XMarkIcon.svg';
 
 /** Homepage content */
 import bannerHomepageMobile from './BannerHompage.png';
@@ -65,8 +63,6 @@ import OXGEN from './partners/OXGEN.svg';
 const icons = {
     offical_logo,
     background,
-    mobileMenuIcon,
-    xMarkIcon,
     homepage: {
         bannerHomepageMobile,
         aboutHomepageBanner,
