@@ -8,6 +8,7 @@ import discordFooter from './svg/footer/discord.svg';
 import twitterFooter from './svg/footer/twitter.svg';
 import mediumFooter from './svg/footer/medium.svg';
 import mobileMenuIcon from './svg/MobileMenu.svg';
+import xMarkIcon from './svg/XMarkIcon.svg';
 
 /** Homepage content */
 import bannerHomepageMobile from './BannerHompage.png';
@@ -32,13 +33,13 @@ import ECOSYSTEM_MD from './ecosystem_md.svg';
 import ECOSYSTEM_DESKTOP from './ecosystem_desktop.png';
 
 // Roadmap
-import ECOSYSTEM_1 from './svg/ecosystem/Ecosystem_1.svg';
-import ECOSYSTEM_2 from './svg/ecosystem/Ecosystem_2.svg';
-import ECOSYSTEM_3 from './svg/ecosystem/Ecosystem_3.svg';
-import ECOSYSTEM_4 from './svg/ecosystem/Ecosystem_4.svg';
-import ECOSYSTEM_5 from './svg/ecosystem/Ecosystem_5.svg';
-import ECOSYSTEM_6 from './svg/ecosystem/Ecosystem_6.svg';
-import ECOSYSTEM_7 from './svg/ecosystem/Ecosystem_7.svg';
+import launchpad from './svg/ecosystem/launchpad.svg';
+import exchange from './svg/ecosystem/exchange.svg';
+import marketplace from './svg/ecosystem/marketplace.svg';
+import community from './svg/ecosystem/community.svg';
+import token from './svg/ecosystem/token.png';
+import nft from './svg/ecosystem/nft.svg';
+import dao from './svg/ecosystem/dao.svg';
 
 // Partners
 import HASHSTACK from './partners/HASHSTACK.svg';
@@ -65,6 +66,7 @@ const icons = {
     offical_logo,
     background,
     mobileMenuIcon,
+    xMarkIcon,
     homepage: {
         bannerHomepageMobile,
         aboutHomepageBanner,
@@ -92,13 +94,13 @@ const icons = {
     EXCHANGE,
     MARKETPLACE,
     ecosystem: {
-        ECOSYSTEM_1,
-        ECOSYSTEM_2,
-        ECOSYSTEM_3,
-        ECOSYSTEM_4,
-        ECOSYSTEM_5,
-        ECOSYSTEM_6,
-        ECOSYSTEM_7,
+        launchpad,
+        exchange,
+        marketplace,
+        community,
+        token,
+        nft,
+        dao,
     },
     partners: {
         HASHSTACK,

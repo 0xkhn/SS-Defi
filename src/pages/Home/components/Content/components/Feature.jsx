@@ -36,10 +36,10 @@ const FeatureCard = () => {
     ];
 
     return (
-        <div className="inline-flex flex-col items-start gap-[30px] md:grid md:grid-cols-2 min-[1200px]:grid-cols-4 min-[1200px]:max-w-[1200px]">
+        <div className="flex flex-wrap justify-center items-center gap-[30px] min-[1200px]:grid min-[1200px]:grid-cols-2 min-[1200px]:max-w-[1200px] min-[1200px]:gap-[40px] min-[1440px]:grid min-[1440px]:grid-cols-4">
             {featureCardItems.map((item, idx) => (
                 <div
-                    className="relative flex h-[345px] w-[350px] items-end md:w-[309px] min-[1200px]:w-[270px]"
+                    className="relative flex h-[345px] w-[350px] items-end md:max-w-[309px] min-[1200px]:max-w-[270px]"
                     key={idx}
                 >
                     <div className="card-hover relative flex justify-center">

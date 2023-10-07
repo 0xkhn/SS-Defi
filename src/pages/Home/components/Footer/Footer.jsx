@@ -20,7 +20,7 @@ const HomepageFooterMobile = (props) => {
             style={{ background: 'rgba(28, 26, 45, 0.6)' }}
             className="fix bottom-0 w-screen items-center border-t-[0.5px] border-[#C6C6C6]"
         >
-            <div className="flex flex-col gap-[30px] px-[20px] py-[80px] md:mx-[60px] min-[1200px]:mx-[98px] min-[1200px]:flex-row min-[1200px]:justify-between">
+            <div className="flex flex-col gap-[30px] py-[80px] md:mx-[60px] min-[1200px]:mx-[98px] min-[1200px]:flex-row min-[1200px]:justify-between">
                 <div className="flex flex-col">
                     <FooterHeading />
                 </div>

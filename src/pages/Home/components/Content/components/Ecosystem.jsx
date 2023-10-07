@@ -28,12 +28,12 @@ const EcosystemCard = ({ icon, title, description }) => {
             style={{ background: 'rgba(255, 255, 255, 0.10)' }}
             className="flex h-[90px] md:h-[100px] items-center gap-[15px] rounded-[16px] p-[15px] w-full md:w-[316.5px]"
         >
-            <div className="flex h-[60px] min-w-[60px] items-center justify-center rounded-[12px] bg-[#24C3BC]">
-                <img src={icon} alt="ecosystem 1" className="max-w-[40px]" />
-            </div>
-            <div className="flex w-full flex-col items-start gap-[2px] rounded-[16px]">
-                <div className="text-start font-['Roboto'] text-[16px] font-bold leading-tight">{title}</div>
-                <div className="font-['Roboto'] text-[14px] font-normal text-[#C6C6C6] leading-tight">
+            <img src={icon} alt="ecosystem 1" className="max-w-[60px]" />
+            <div className="flex w-full h-[60px] flex-col items-start gap-[2px] rounded-[16px]">
+                <div className="text-start font-['Roboto'] text-[16px] font-bold leading-normal md:leading-tight">
+                    {title}
+                </div>
+                <div className="font-['Roboto'] text-[14px] font-normal text-[#C6C6C6] leading-normal md:leading-tight">
                     {description}
                 </div>
             </div>
@@ -63,37 +63,37 @@ const EcosystemListCardDesktop = () => {
 
 const ecosystemCardItems = [
     {
-        icon: icons.ecosystem.ECOSYSTEM_7,
+        icon: icons.ecosystem.launchpad,
         title: 'Starksport Launchpad',
         subtitle: 'Allows quality crypto projects to conduct the token sale',
     },
     {
-        icon: icons.ecosystem.ECOSYSTEM_6,
+        icon: icons.ecosystem.community,
         title: 'Starksport Community',
         subtitle: 'Active, supportive and loyal',
     },
     {
-        icon: icons.ecosystem.ECOSYSTEM_5,
+        icon: icons.ecosystem.exchange,
         title: 'Starksport Exchange',
         subtitle: 'Swap, earn, and provide liquidity to get sharing fees',
     },
     {
-        icon: icons.ecosystem.ECOSYSTEM_4,
+        icon: icons.ecosystem.token,
         title: 'Starksport Token',
         subtitle: 'Native token with wonderful utilities',
     },
     {
-        icon: icons.ecosystem.ECOSYSTEM_3,
+        icon: icons.ecosystem.marketplace,
         title: 'Starksport Marketplace',
         subtitle: 'Trade, lend or borrow unique digital items and make it valuable',
     },
     {
-        icon: icons.ecosystem.ECOSYSTEM_2,
+        icon: icons.ecosystem.nft,
         title: 'Starksport NFT',
-        subtitle: 'A limited collection belongs to early contributors with huge benefits',
+        subtitle: 'A limited collection belongs to early users with huge benefits',
     },
     {
-        icon: icons.ecosystem.ECOSYSTEM_1,
+        icon: icons.ecosystem.dao,
         title: 'Starksport DAO',
         subtitle: 'Empower the community to vote proposals',
     },

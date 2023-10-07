@@ -16,57 +16,6 @@ export default function PartnerShip() {
     );
 }
 
-const partners = [
-    {
-        image: icons.partners.HASHSTACK,
-        href: 'https://hashstack.finance/',
-    },
-    {
-        image: icons.partners.GALXE,
-        href: 'https://galxe.com/',
-    },
-    {
-        image: icons.partners.SITHSWAP,
-        href: 'https://sithswap.com/',
-    },
-    {
-        image: icons.partners.TRANTOR,
-        href: 'https://trantor.xyz/',
-    },
-    {
-        image: icons.partners.CARMINE,
-        href: 'https://carmine.finance/',
-    },
-    {
-        image: icons.partners.MISES,
-        href: 'https://www.mises.site/',
-    },
-    {
-        image: icons.partners.LINKE,
-        href: 'https://link3.to/',
-    },
-    {
-        image: icons.partners.METABIT,
-        href: 'http://metabitglobal.com/',
-    },
-    {
-        image: icons.partners.TASKON,
-        href: 'https://taskon.xyz/',
-    },
-    {
-        image: icons.partners.ZETACHAIN,
-        href: 'https://www.zetachain.com/',
-    },
-    {
-        image: icons.partners.OPSIDE,
-        href: 'https://opside.network/',
-    },
-    {
-        image: icons.partners.LAYERSWAP,
-        href: 'https://www.layerswap.io/',
-    },
-];
-
 const partnersFull = [
     {
         image: icons.partners.OKX,
@@ -149,9 +98,9 @@ const partnersFull = [
 const ParterContentMobile = () => {
     return (
         <>
-            <div className="inline-flex flex-col items-center px-[12px]">
-                <div className="grid grid-cols-2 flex-wrap items-start justify-center gap-[20px] py-[6px] md:grid-cols-3 md:gap-6">
-                    {partners.map((item, idx) => (
+            <div className="inline-flex flex-col items-center px-[24px]">
+                <div className="flex flex-wrap items-start justify-center gap-[20px] py-[6px] md:gap-[30px]">
+                    {partnersFull.map((item, idx) => (
                         <SponserCardMockup key={idx} icon={item.image} href={item.href} />
                     ))}
                 </div>
