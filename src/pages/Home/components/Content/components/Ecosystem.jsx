@@ -28,7 +28,7 @@ const EcosystemCard = ({ icon, title, description }) => {
             style={{ background: 'rgba(255, 255, 255, 0.10)' }}
             className="flex h-[90px] md:h-[100px] items-center gap-[15px] rounded-[16px] p-[15px] w-full md:w-[316.5px]"
         >
-            <img src={icon} alt="ecosystem 1" className="max-w-[60px]" />
+            <img src={icon} alt="ecosystem 1" className="max-w-[50px]" />
             <div className="flex w-full h-[60px] flex-col items-start gap-[2px] rounded-[16px]">
                 <div className="text-start font-['Roboto'] text-[16px] font-bold leading-normal md:leading-tight">
                     {title}

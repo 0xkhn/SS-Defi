@@ -21,7 +21,7 @@ export default function SiteNavigation(props) {
 const MobileSiteNavigation = () => {
     return (
         <div
-            style={{ background: 'rgba(255, 255, 255, 0.1)' }}
+            style={{ background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(30px)' }}
             className="fixed top-0 z-[9999] flex h-[70px] w-screen justify-between px-[24px] py-[17px] overlay-background md:px-[60px] md:py-[24px] md:h-[96px]"
         >
             <Popover className="flex w-full justify-between">
@@ -50,6 +50,7 @@ const MobileSiteNavigation = () => {
                                     maxHeight: 'calc(100vh - 5rem)',
                                     overflowY: 'auto',
                                     background: 'rgba(255, 255, 255, 0.1)',
+                                    backdropFilter: 'blur(30px)',
                                 }}
                             >
                                 <div className="stroke-secondary flex flex-col gap-[32px] py-[30px] px-[24px] md:px-[60px]">
