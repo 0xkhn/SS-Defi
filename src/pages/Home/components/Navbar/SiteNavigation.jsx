@@ -8,10 +8,10 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 export default function SiteNavigation(props) {
     return (
         <>
-            <div className="hidden md:block">
+            <div className="hidden min-[1200px]:block">
                 <DesktopSiteNavigation />
             </div>
-            <div className="md:hidden">
+            <div className="min-[1200px]:hidden">
                 <MobileSiteNavigation />
             </div>
         </>
@@ -45,36 +45,39 @@ const MobileSiteNavigation = () => {
                             leaveTo="transform opacity-0 scale-95"
                         >
                             <Popover.Panel
-                                className="absolute left-0 top-[70px] flex w-full flex-col shadow-lg backdrop-blur-[30px] md:inline-flex md:max-h-full md:w-full md:min-w-0 md:flex-row md:items-center md:justify-between md:gap-[24px] md:overflow-y-visible md:border-b-0 md:shadow-none"
+                                className="absolute left-0 top-[70px] flex w-full flex-col shadow-lg backdrop-blur-[30px]"
                                 style={{
                                     maxHeight: 'calc(100vh - 5rem)',
                                     overflowY: 'auto',
                                     background: 'rgba(255, 255, 255, 0.1)',
                                 }}
                             >
-                                <div className="stroke-secondary flex flex-col gap-[32px] py-[36px] md:w-full md:flex-shrink md:flex-row md:items-center md:justify-between md:border-y-0 md:py-0">
-                                    <div className="flex flex-col gap-[32px] px-[16px] md:min-w-0 md:flex-shrink md:flex-row md:items-center md:gap-[32px] md:px-0">
-                                        <a className="text-[16px] font-medium text-white md:text-[14px]" href="#about">
+                                <div className="stroke-secondary flex flex-col gap-[32px] py-[36px]">
+                                    <div className="flex flex-col gap-[32px] px-[16px]">
+                                        <AnchorLink
+                                            className="text-[16px] font-medium text-white md:text-[14px]"
+                                            href="#about"
+                                        >
                                             About
-                                        </a>
-                                        <a
+                                        </AnchorLink>
+                                        <AnchorLink
                                             className="text-[16px] font-medium text-white md:text-[14px]"
                                             href="#features"
                                         >
                                             Features
-                                        </a>
-                                        <a
+                                        </AnchorLink>
+                                        <AnchorLink
                                             className="text-[16px] font-medium text-white md:text-[14px]"
                                             href="#ecosystem"
                                         >
                                             Ecosystem
-                                        </a>
-                                        <a
+                                        </AnchorLink>
+                                        <AnchorLink
                                             className="text-[16px] font-medium text-white md:text-[14px]"
                                             href="#partner"
                                         >
                                             Backers & Partners
-                                        </a>
+                                        </AnchorLink>
                                     </div>
                                 </div>
                             </Popover.Panel>

@@ -4,10 +4,10 @@ import { HeaderComponent } from './HeaderComponent';
 export default function About() {
     return (
         <div className="relative">
-            <div className="min-[1440px]:hidden">
+            <div className="min-[1200px]:hidden">
                 <AboutUsMobile />
             </div>
-            <div className="hidden min-[1440px]:flex">
+            <div className="hidden min-[1200px]:flex">
                 <AboutUsDesktop />
             </div>
             <div id="about" className="absolute top-[-200px]"></div>
@@ -17,7 +17,7 @@ export default function About() {
 
 const AboutUsDesktop = () => {
     return (
-        <div className="about-linear-background mx-[120px] flex w-[1200px] p-[60px] flex-row gap-[20px] rounded-[24px] border-[0.5px] border-[#24C3BC]">
+        <div className="about-linear-background mx-[120px] flex w-[960px] min-[1440px]:w-[1200px] p-[60px] flex-row gap-[20px] rounded-[24px] border-[0.5px] border-[#24C3BC]">
             <div className="flex max-w-[540px] flex-col justify-between gap-[20px]">
                 <div className="flex flex-col gap-[24px]">
                     <HeaderComponent
@@ -39,7 +39,7 @@ const AboutUsDesktop = () => {
 const AboutUsMobile = () => {
     return (
         <div className="about-linear-background flex flex-col gap-[30px] mx-[20px] md:mx-[60px] md:max-w-[648px] md:rounded-[24px] md:border-[0.5px] md:border-[#C6C6C6] md:px-[30px] md:py-[60px]">
-            <div className="flex flex-col items-center gap-[20px] min-[1440px]:max-w-[540px]">
+            <div className="flex flex-col items-center gap-[20px]">
                 <div className="flex flex-col gap-[40px]">
                     <div className="flex flex-col gap-[80px]">
                         <HeaderComponent title="WHAT IS STARKSPORT" subTitle="Decentralized Launchpad" />
@@ -63,7 +63,7 @@ const AboutUsButton = () => {
             href="https://starksport.gitbook.io/starksport/"
             target="_blank"
             rel="noreferrer"
-            className="button-hover-2 flex items-center justify-center gap-[4px] self-stretch rounded-[16px] bg-white px-[20px] py-[12px] w-full md:w-[175px] min-[1440px]:px-[24px]"
+            className="button-hover-2 flex items-center justify-center gap-[4px] self-stretch rounded-[16px] bg-white px-[20px] py-[12px] w-full md:w-[175px] min-[1200px]:px-[24px]"
         >
             <div className="font-['Roboto'] text-[16px] font-bold text-[#07051B]">More About Us</div>
         </a>
@@ -72,7 +72,7 @@ const AboutUsButton = () => {
 
 const AboutUsContent = () => {
     return (
-        <div className="self-stretch text-left font-['Roboto'] text-[14px] font-normal text-[#C6C6C6] md:text-[16px] min-[1440px]:px-0 min-[1440px]:text-start min-[1440px]:max-w-[530px]">
+        <div className="self-stretch text-left font-['Roboto'] text-[14px] font-normal text-[#C6C6C6] md:text-[16px] min-[1200px]:px-0 min-[1200px]:text-start min-[1200px]:max-w-[530px]">
             <div className="">
                 Starksport Launchpad is the innovative decentralized IDO platform across blockchain networks. It has
                 been designed as a completely decentralized protocol allowing quality crypto projects to conduct the

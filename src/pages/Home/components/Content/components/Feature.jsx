@@ -3,7 +3,7 @@ import { HeaderComponent } from './HeaderComponent';
 
 export default function Feature() {
     return (
-        <div className="relative flex flex-col gap-[30px] md:mx-[98px] min-[1440px]:gap-[80px]">
+        <div className="relative flex flex-col gap-[30px] md:mx-[98px] min-[1200px]:gap-[80px]">
             <HeaderComponent title="FEATURES" subTitle="OUR FEATURES" />
             <FeatureCard />
             <div id="features" className="absolute top-[-200px]"></div>
@@ -36,10 +36,10 @@ const FeatureCard = () => {
     ];
 
     return (
-        <div className="inline-flex flex-col items-start gap-[40px] md:grid md:grid-cols-2 min-[1440px]:grid-cols-4 min-[1440px]:max-w-[1200px]">
+        <div className="inline-flex flex-col items-start gap-[30px] md:grid md:grid-cols-2 min-[1200px]:grid-cols-4 min-[1200px]:max-w-[1200px]">
             {featureCardItems.map((item, idx) => (
                 <div
-                    className="relative flex h-[345px] w-[350px] items-end md:w-[309px] min-[1440px]:w-[270px]"
+                    className="relative flex h-[345px] w-[350px] items-end md:w-[309px] min-[1200px]:w-[270px]"
                     key={idx}
                 >
                     <div className="card-hover relative flex justify-center">
@@ -56,7 +56,7 @@ const FeatureCard = () => {
                                 <div className="text-center font-['Roboto'] text-[16px] font-bold text-white md:text-[20px]">
                                     {item.title}
                                 </div>
-                                <div className="text-center font-['Roboto'] text-[14px] font-normal text-[#C6C6C6] md:max-w-[268px] md:text-[16px] min-[1440px]:px-[20px]">
+                                <div className="text-center font-['Roboto'] text-[14px] font-normal text-[#C6C6C6] md:max-w-[268px] md:text-[16px] min-[1200px]:px-[20px]">
                                     {item.subtitle}
                                 </div>
                             </div>

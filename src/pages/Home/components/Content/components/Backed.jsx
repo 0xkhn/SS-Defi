@@ -2,7 +2,7 @@ import { HeaderComponent } from './HeaderComponent';
 
 export default function Backed() {
     return (
-        <div className="linear-background flex flex-col gap-[30px] md:gap-[60px] md:mx-[60px] min-[1440px]:mx-[98px] min-[1440px]:max-w-[1244px] min-[1440px]:gap-20 min-[1440px]:rounded-3xl min-[1440px]:border-[0.5px] min-[1440px]:border-[#C6C6C6] min-[1440px]:px-[42px] min-[1440px]:py-20">
+        <div className="linear-background flex flex-col gap-[30px] md:gap-[60px] md:mx-[60px] min-[1200px]:mx-[98px] min-[1200px]:max-w-[1244px] min-[1200px]:gap-20 min-[1200px]:rounded-3xl min-[1200px]:border-[0.5px] min-[1200px]:border-[#C6C6C6] min-[1200px]:px-[42px] min-[1200px]:py-20">
             <HeaderComponent title="BACKED" subTitle="Our Backers & Investors" />
             <BackedContent />
         </div>
@@ -15,10 +15,10 @@ const BackedContent = () => {
             <div className="md:hidden">
                 <BackedContentMobile />
             </div>
-            <div className="hidden md:flex min-[1440px]:hidden">
+            <div className="hidden md:flex min-[1200px]:hidden">
                 <BackedContentMd />
             </div>
-            <div className="hidden min-[1440px]:flex">
+            <div className="hidden min-[1200px]:flex">
                 <BackedContentDesktop />
             </div>
         </>
@@ -27,7 +27,7 @@ const BackedContent = () => {
 
 const BackedContentDesktop = () => {
     return (
-        <div className="hidden min-[1440px]:flex items-start justify-center gap-[30px] flex-wrap max-w-[1200px]">
+        <div className="hidden min-[1200px]:flex items-start justify-center gap-[30px] flex-wrap max-w-[1200px]">
             <SponserCardMockup />
             <SponserCardMockup />
             <SponserCardMockup />
@@ -42,7 +42,7 @@ const BackedContentDesktop = () => {
 
 const BackedContentMd = () => {
     return (
-        <div className="hidden md:flex min-[1440px]:hidden items-start justify-center gap-[30px] flex-wrap max-w-[648px]">
+        <div className="hidden md:flex min-[1200px]:hidden items-start justify-center gap-[30px] flex-wrap max-w-[648px]">
             <SponserCardMockup />
             <SponserCardMockup />
             <SponserCardMockup />

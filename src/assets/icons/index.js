@@ -22,13 +22,13 @@ import audit2 from './svg/audit_2.svg';
 import EXCHANGE from './svg/exchange.svg';
 import MARKETPLACE from './svg/marketplace.svg';
 
-import desktopRoadmap from './desktop_roadmap.png';
+import desktopRoadmap from './desktop_roadmap.svg';
 import BG_OFFICIAL from './svg/background_offical.svg';
 import CERTIK_LOGO from './certik_logo.png';
 import STARKGUARDIAN_LOGO from './starkguar_logo.png';
 import ECLIP_SHADOW from './svg/eclipse_shadow.svg';
 import ECOSYSTEM_MOBILE from './ecosystem_mobile.png';
-import ECOSYSTEM_MD from './ecosystem_md.png';
+import ECOSYSTEM_MD from './ecosystem_md.svg';
 import ECOSYSTEM_DESKTOP from './ecosystem_desktop.png';
 
 // Roadmap

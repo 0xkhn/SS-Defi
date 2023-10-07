@@ -13,7 +13,7 @@ const contentStyle = {
 
 export default function OurRoadmap() {
     return (
-        <div className="flex flex-col justify-center gap-[30px] md:gap-[60px] md:mx-[60px] min-[1440px]:gap-[80px] min-[1440px]:mx-[120px]">
+        <div className="flex flex-col justify-center gap-[30px] md:gap-[60px] md:mx-[60px] min-[1200px]:gap-[80px] min-[1200px]:mx-[120px]">
             <HeaderComponent title="ROADMAP" subTitle="Our Roadmap" />
             <div className="max-w-[342px] md:hidden">
                 <RoadmapMobile />
@@ -41,12 +41,12 @@ const RoadmapDesktop = () => {
         );
     };
     return (
-        <div className="relative h-[265px] min-w-[648px] min-[1440px]:h-[412px] min-[1440px]:min-w-[1220px]">
+        <div className="relative h-[265px] min-w-[648px] min-[1200px]:h-[412px] min-[1200px]:min-w-[1120px]">
             <div className="flex absolute flex h-full items-center">
                 <img src={icons.desktopRoadmap} alt="roadmap_desktop" className="w-full" />
             </div>
-            <div className="flex flex-col justify-between h-full w-full min-[1440px]:gap-[65px]">
-                <div className="flex justify-center gap-[106px] min-[1440px]:gap-[360px]">
+            <div className="flex flex-col justify-between h-full w-full min-[1200px]:gap-[65px]">
+                <div className="flex justify-center gap-[106px] min-[1200px]:gap-[360px]">
                     <RoadmapDesktopItem
                         item={roadmapItemList[1]}
                         className="w-[190px] pr-[18px]"

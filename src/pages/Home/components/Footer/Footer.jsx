@@ -4,10 +4,10 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 const HomepageFooter = () => {
     return (
         <>
-            <div className="min-[1440px]:hidden">
+            <div className="min-[1200px]:hidden">
                 <HomepageFooterMobile />
             </div>
-            <div className="hidden min-[1440px]:flex">
+            <div className="hidden min-[1200px]:flex">
                 <HomepageFooterDesktop />
             </div>
         </>
@@ -20,7 +20,7 @@ const HomepageFooterMobile = (props) => {
             style={{ background: 'rgba(28, 26, 45, 0.6)' }}
             className="fix bottom-0 w-screen items-center border-t-[0.5px] border-[#C6C6C6]"
         >
-            <div className="flex flex-col gap-[30px] px-[20px] py-[80px] md:mx-[60px] min-[1440px]:mx-[98px] min-[1440px]:flex-row min-[1440px]:justify-between">
+            <div className="flex flex-col gap-[30px] px-[20px] py-[80px] md:mx-[60px] min-[1200px]:mx-[98px] min-[1200px]:flex-row min-[1200px]:justify-between">
                 <div className="flex flex-col">
                     <FooterHeading />
                 </div>
@@ -52,10 +52,10 @@ const HomepageFooterDesktop = () => {
             style={{ background: 'rgba(28, 26, 45, 0.6)' }}
             className="fix bottom-0 w-screen items-center border-t-[0.5px] border-[#C6C6C6]"
         >
-            <div className="flex flex-col gap-[30px] mx-[20px] py-[80px] md:mx-[60px] min-[1440px]:mx-[120px] min-[1440px]:flex-row min-[1440px]:justify-between">
+            <div className="flex flex-col gap-[30px] mx-[20px] py-[80px] md:mx-[60px] min-[1200px]:mx-[120px] min-[1200px]:flex-row min-[1200px]:justify-between">
                 <div className="flex flex-col">
                     <FooterHeading />
-                    <div className="min-[1440px]:flex">
+                    <div className="min-[1200px]:flex">
                         <FooterPolicy />
                     </div>
                 </div>
@@ -95,12 +95,12 @@ const FooterBarLeft = () => {
         },
     ];
     return (
-        <div className="flex flex-col justify-center items-start gap-[20px] md:gap-[10px] min-[1440px]:gap-[16px]">
+        <div className="flex flex-col justify-center items-start gap-[20px] md:gap-[10px] min-[1200px]:gap-[16px]">
             {itemListLeft.map((item, idx) => (
                 <AnchorLink
                     href={item.href}
                     key={idx}
-                    className="button-navbar-hover whitespace-nowrap font-['Roboto'] text-[16px] font-bold text-white py-[12px] px-[20px] rounded-[16px]"
+                    className="button-navbar-hover whitespace-nowrap font-['Roboto'] text-[16px] font-bold text-white py-[12px] px-[20px] rounded-[16px] md:pl-0"
                 >
                     <div className="text-white">{item.title}</div>
                 </AnchorLink>
@@ -121,12 +121,12 @@ const FooterBarRight = () => {
         },
     ];
     return (
-        <div className="flex flex-col justify-center items-start gap-[20px] md:gap-[10px] min-[1440px]:gap-[16px]">
+        <div className="flex flex-col justify-center items-start gap-[20px] md:gap-[10px] min-[1200px]:gap-[16px]">
             {itemListRight.map((item, idx) => (
                 <AnchorLink
                     href={item.href}
                     key={idx}
-                    className="button-navbar-hover whitespace-nowrap font-['Roboto'] text-[16px] font-bold text-white py-[12px] px-[20px] rounded-[16px]"
+                    className="button-navbar-hover whitespace-nowrap font-['Roboto'] text-[16px] font-bold text-white py-[12px] px-[20px] rounded-[16px] md:pl-0"
                 >
                     <div className="text-white">{item.title}</div>
                 </AnchorLink>
