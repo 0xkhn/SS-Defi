@@ -1,9 +1,9 @@
 import Logo from './components/Logo';
 import LaunchAppButton from './components/LaunchAppButton';
 import MobileMenuButton from './components/MobileMenuButton';
-import { Popover, Transition } from '@headlessui/react';
-import { Fragment } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { twMerge } from 'tailwind-merge';
 
 export default function SiteNavigation(props) {
     return (
@@ -19,73 +19,68 @@ export default function SiteNavigation(props) {
 }
 
 const MobileSiteNavigation = () => {
+    const [open, setOpen] = useState(false);
+    const wrapperRef = useRef(null);
+    useOutsideAlerter(wrapperRef, setOpen);
+
+    const toggle = () => {
+        setOpen(!open);
+    };
+
     return (
         <div
+            ref={wrapperRef}
             style={{ background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(30px)' }}
-            className="fixed top-0 z-[9999] flex h-[70px] w-screen justify-between px-[24px] py-[17px] overlay-background md:px-[60px] md:py-[24px] md:h-[96px]"
+            className={twMerge(
+                'fixed top-0 z-[9999] flex flex-col h-[88px] w-screen justify-between px-[20px] py-[20px] overlay-background md:px-[60px] md:py-[24px] md:h-[96px]',
+                open && '!h-[295.56px] md:!h-[316.56px]',
+            )}
         >
-            <Popover className="flex w-full justify-between">
-                {({ open }) => (
-                    <>
-                        <div className="flex items-center">
-                            <Logo className="h-[30px] w-[141.388px] md:h-[48px] md:w-[212.082px]" />
-                        </div>
-                        <div className="flex items-center gap-[30px]">
-                            <LaunchAppButton styleButton="py-[12px] px-[24px] rounded-[16px] h-[48px] w-[175px]" />
-                            <MobileMenuButton open={open} />
-                        </div>
-                        <Transition
-                            show={open}
-                            as={Fragment}
-                            enter="transition ease-out duration-200"
-                            enterFrom="transform opacity-0 scale-95"
-                            enterTo="transform opacity-100 scale-100"
-                            leave="transition ease-in duration-150"
-                            leaveFrom="transform opacity-100 scale-100"
-                            leaveTo="transform opacity-0 scale-95"
+            <div className="flex w-full justify-between">
+                <div className="flex items-center">
+                    <Logo className="h-[30px] w-[141.388px] md:h-[48px] md:w-[212.082px]" />
+                </div>
+                <div className="flex items-center gap-[30px]">
+                    <LaunchAppButton styleButton="py-[12px] px-[24px] rounded-[16px] h-[48px] w-[175px]" />
+                    <MobileMenuButton toggle={toggle} open={open} />
+                </div>
+            </div>
+            <div
+                className="flex w-full flex-col"
+                style={{
+                    maxHeight: 'calc(100vh - 5rem)',
+                    overflowY: 'auto',
+                }}
+            >
+                <div className="stroke-secondary flex flex-col gap-[32px] pt-[17px] md:pt-[30px]">
+                    <div className="flex flex-col gap-[30px]">
+                        <AnchorLink
+                            className="text-[16px] font-['Roboto'] font-medium text-white text-right"
+                            href="#about"
                         >
-                            <Popover.Panel
-                                className="absolute left-0 top-[70px] flex w-full flex-col shadow-lg md:top-[96px]"
-                                style={{
-                                    maxHeight: 'calc(100vh - 5rem)',
-                                    overflowY: 'auto',
-                                    background: 'rgba(255, 255, 255, 0.1)',
-                                    backdropFilter: 'blur(30px)',
-                                }}
-                            >
-                                <div className="stroke-secondary flex flex-col gap-[32px] py-[30px] px-[24px] md:px-[60px]">
-                                    <div className="flex flex-col gap-[30px]">
-                                        <AnchorLink
-                                            className="text-[16px] font-['Roboto'] font-medium text-white text-right"
-                                            href="#about"
-                                        >
-                                            About
-                                        </AnchorLink>
-                                        <AnchorLink
-                                            className="text-[16px] font-['Roboto'] font-medium text-white text-right"
-                                            href="#features"
-                                        >
-                                            Features
-                                        </AnchorLink>
-                                        <AnchorLink
-                                            className="text-[16px] font-['Roboto'] font-medium text-white text-right"
-                                            href="#ecosystem"
-                                        >
-                                            Ecosystem
-                                        </AnchorLink>
-                                        <AnchorLink
-                                            className="text-[16px] font-['Roboto'] font-medium text-white text-right"
-                                            href="#partner"
-                                        >
-                                            Backers & Partners
-                                        </AnchorLink>
-                                    </div>
-                                </div>
-                            </Popover.Panel>
-                        </Transition>
-                    </>
-                )}
-            </Popover>
+                            About
+                        </AnchorLink>
+                        <AnchorLink
+                            className="text-[16px] font-['Roboto'] font-medium text-white text-right"
+                            href="#features"
+                        >
+                            Features
+                        </AnchorLink>
+                        <AnchorLink
+                            className="text-[16px] font-['Roboto'] font-medium text-white text-right"
+                            href="#ecosystem"
+                        >
+                            Ecosystem
+                        </AnchorLink>
+                        <AnchorLink
+                            className="text-[16px] font-['Roboto'] font-medium text-white text-right"
+                            href="#partner"
+                        >
+                            Backers & Partners
+                        </AnchorLink>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
@@ -130,4 +125,23 @@ const DesktopSiteNavigation = (props) => {
             </div>
         </div>
     );
+};
+
+const useOutsideAlerter = (ref, setOpen) => {
+    useEffect(() => {
+        /**
+         * Alert if clicked on outside of element
+         */
+        function handleClickOutside(event) {
+            if (ref.current && !ref.current.contains(event.target)) {
+                setOpen(false);
+            }
+        }
+        // Bind the event listener
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            // Unbind the event listener on clean up
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [ref]);
 };

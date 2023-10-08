@@ -105,6 +105,23 @@
     }
 }
 
+.navbar-transition {
+    transition: all 0.2s ease-in-out;
+}
+.navbar-transition.open {
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: transparent !important;
+    }
+    height: 289.56px !important;
+
+    @media screen and (min-width: 768px) {
+        height: 316.56px !important;
+    }
+}
+
 .ant-dropdown {
     top: 100px !important;
 }
