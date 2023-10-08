@@ -39,7 +39,7 @@ const BannerContent = () => {
             {/* <CardInfo /> */}
             <div className="flex w-full items-center justify-center gap-[20px] px-[20px] md:px-0 md:flex-row min-[1200px]:justify-start">
                 <div className="">
-                    <LaunchAppButton styleButton="py-[12px] px-[24px] rounded-[16px] h-[48px] w-[135px] md:w-[175px]" />
+                    <LaunchAppButton styleButton="py-[12px] px-[10px] md:px-[24px] rounded-[16px] h-[48px] w-[135px] md:w-[175px]" />
                 </div>
                 <div className="">
                     <BannerButtonDocument />
