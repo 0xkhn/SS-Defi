@@ -22,7 +22,9 @@ import audit2 from './svg/audit_2.svg';
 import EXCHANGE from './svg/exchange.svg';
 import MARKETPLACE from './svg/marketplace.svg';
 
-import desktopRoadmap from './desktop_roadmap.svg';
+import roadmap_md from './roadmap_md.png';
+import roadmap_1440 from './roadmap_1440.png';
+import roadmap_1920 from './roadmap_1920.png';
 import BG_OFFICIAL from './svg/background_offical.svg';
 import CERTIK_LOGO from './certik_logo.png';
 import STARKGUARDIAN_LOGO from './starkguar_logo.png';
@@ -81,7 +83,9 @@ const icons = {
         mediumFooter,
         githubIcon,
     },
-    desktopRoadmap,
+    roadmap_md,
+    roadmap_1440,
+    roadmap_1920,
     BG_OFFICIAL,
     CERTIK_LOGO,
     STARKGUARDIAN_LOGO,
