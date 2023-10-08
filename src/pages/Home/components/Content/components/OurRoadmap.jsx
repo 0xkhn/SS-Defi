@@ -13,7 +13,7 @@ const contentStyle = {
 
 export default function OurRoadmap() {
     return (
-        <div className="flex flex-col justify-center gap-[30px] py-[60px] md:py-0 md:gap-[60px] md:mx-[60px] min-[1200px]:gap-[80px] min-[1200px]:mx-[120px]">
+        <div className="flex flex-col justify-center gap-[30px] md:gap-[60px] md:mx-[60px] min-[1200px]:gap-[80px] min-[1200px]:mx-[120px]">
             <HeaderComponent title="ROADMAP" subTitle="Our Roadmap" />
             <div className="max-w-[342px] md:hidden">
                 <RoadmapMobile />

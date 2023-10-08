@@ -46,7 +46,7 @@ const MobileSiteNavigation = () => {
                 </div>
             </div>
             <div
-                className="flex w-full flex-col"
+                className={twMerge('w-full flex-col hidden', open && 'flex')}
                 style={{
                     maxHeight: 'calc(100vh - 5rem)',
                     overflowY: 'auto',
