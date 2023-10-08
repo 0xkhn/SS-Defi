@@ -26,20 +26,6 @@ export default function OurRoadmap() {
 }
 
 const RoadmapDesktop = () => {
-    const RoadmapDesktopItem = (props) => {
-        return (
-            <div className={twMerge('flex gap-[4px]', props.className)}>
-                <div
-                    className={twMerge(
-                        "text-start font-['Roboto'] text-[16px] font-normal text-white",
-                        props.titleStyle,
-                    )}
-                >
-                    {props.item.demoContent}
-                </div>
-            </div>
-        );
-    };
     return (
         <div className="relative h-[265px] min-w-[648px] min-[1200px]:h-[412px] min-[1200px]:min-w-[1120px]">
             <div className="min-[1200px]:hidden">

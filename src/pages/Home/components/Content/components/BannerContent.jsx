@@ -16,9 +16,15 @@ const BannerContent = () => {
     return (
         <div className="flex flex-col items-center gap-[24px] px-[20px] md:max-w-[600px] md:px-0 min-[1200px]:max-w-[657px]">
             <div className="text-center font-['Roboto'] text-[30px] font-bold leading-tight min-[1200px]:text-start min-[1200px]:text-[68px]">
-                <p className="hidden md:block min-[1200px]:text-start mb-0">
+                <p className="hidden min-[1200px]:block text-start mb-0">
                     LEARN, CREATE, EXPLORE & COLLECT WITH{' '}
                     <span className="text-gradient min-[1200px]:text-[64px]">STARKSPORT</span>
+                </p>
+                <p className="hidden md:block min-[1200px]:hidden mb-0">
+                    LEARN, CREATE, EXPLORE & COLLECT
+                    <div>
+                        WITH <span className="text-gradient min-[1200px]:text-[64px]">STARKSPORT</span>
+                    </div>
                 </p>
                 <p className="block md:hidden mb-0">
                     LEARN, CREATE,

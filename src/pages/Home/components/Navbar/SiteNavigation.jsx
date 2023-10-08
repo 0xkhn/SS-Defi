@@ -41,7 +41,7 @@ const MobileSiteNavigation = () => {
                     <Logo className="h-[30px] w-[141.388px] md:h-[48px] md:w-[212.082px]" />
                 </div>
                 <div className="flex items-center gap-[10px] md:gap-[30px]">
-                    <LaunchAppButton styleButton="py-[12px] px-[24px] rounded-[16px] h-[48px] w-[135px]" />
+                    <LaunchAppButton styleButton="py-[12px] px-[10px] md:px-[24px] rounded-[16px] h-[48px] w-[135px]" />
                     <MobileMenuButton toggle={toggle} open={open} />
                 </div>
             </div>
