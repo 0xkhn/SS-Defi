@@ -33,15 +33,15 @@ const MobileSiteNavigation = () => {
             style={{ background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(30px)' }}
             className={twMerge(
                 'fixed top-0 z-[9999] flex flex-col h-[88px] w-screen justify-between px-[20px] py-[20px] overlay-background md:px-[60px] md:py-[24px] md:h-[96px]',
-                open && '!h-[295.56px] md:!h-[316.56px]',
+                open && '!h-[235.56px] md:!h-[316.56px]',
             )}
         >
             <div className="flex w-full justify-between">
                 <div className="flex items-center">
                     <Logo className="h-[30px] w-[141.388px] md:h-[48px] md:w-[212.082px]" />
                 </div>
-                <div className="flex items-center gap-[30px]">
-                    <LaunchAppButton styleButton="py-[12px] px-[24px] rounded-[16px] h-[48px] w-[175px]" />
+                <div className="flex items-center gap-[10px] md:gap-[30px]">
+                    <LaunchAppButton styleButton="py-[12px] px-[24px] rounded-[16px] h-[48px] w-[135px]" />
                     <MobileMenuButton toggle={toggle} open={open} />
                 </div>
             </div>
@@ -52,28 +52,28 @@ const MobileSiteNavigation = () => {
                     overflowY: 'auto',
                 }}
             >
-                <div className="stroke-secondary flex flex-col gap-[32px] pt-[17px] md:pt-[30px]">
-                    <div className="flex flex-col gap-[30px]">
+                <div className="stroke-secondary flex flex-col gap-[10px] pt-[17px] md:gap-[30px] md:pt-[30px]">
+                    <div className="flex flex-col gap-[10px] md:gap-[30px]">
                         <AnchorLink
-                            className="text-[16px] font-['Roboto'] font-medium text-white text-right"
+                            className="text-[16px] font-['Roboto'] font-medium text-white text-right hover:text-[#24c3bc]"
                             href="#about"
                         >
                             About
                         </AnchorLink>
                         <AnchorLink
-                            className="text-[16px] font-['Roboto'] font-medium text-white text-right"
+                            className="text-[16px] font-['Roboto'] font-medium text-white text-right hover:text-[#24c3bc]"
                             href="#features"
                         >
                             Features
                         </AnchorLink>
                         <AnchorLink
-                            className="text-[16px] font-['Roboto'] font-medium text-white text-right"
+                            className="text-[16px] font-['Roboto'] font-medium text-white text-right hover:text-[#24c3bc]"
                             href="#ecosystem"
                         >
                             Ecosystem
                         </AnchorLink>
                         <AnchorLink
-                            className="text-[16px] font-['Roboto'] font-medium text-white text-right"
+                            className="text-[16px] font-['Roboto'] font-medium text-white text-right hover:text-[#24c3bc]"
                             href="#partner"
                         >
                             Backers & Partners

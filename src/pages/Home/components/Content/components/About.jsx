@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { AboutUsBanner } from './Banner';
 import { HeaderComponent } from './HeaderComponent';
 
@@ -71,24 +72,42 @@ const AboutUsButton = () => {
 };
 
 const AboutUsContent = () => {
+    const [isReadMore, setIsReadMore] = useState(false);
+    const toggleReadMore = () => {
+        setIsReadMore(true);
+    };
     return (
         <div className="self-stretch text-left font-['Roboto'] text-[14px] font-normal text-[#C6C6C6] md:text-[16px] min-[1200px]:px-0 min-[1200px]:text-start min-[1200px]:max-w-[530px]">
             <div className="">
                 Starksport Launchpad is the innovative decentralized IDO platform across blockchain networks. It has
                 been designed as a completely decentralized protocol allowing quality crypto projects to conduct the
-                token sale as well as IDO in a fully compliant environment and secure manner.
+                token sale as well as IDO in a fully compliant environment and secure manner
+                {isReadMore ? (
+                    '.'
+                ) : (
+                    <span>
+                        ...
+                        <span className="text-[#24c3bc]" onClick={toggleReadMore}>
+                            Read More
+                        </span>
+                    </span>
+                )}
             </div>
-            <br />
-            <div>
-                Starksport Launchpad empowers investors and allows quality project creators the ability to provide token
-                or NFT sales.
-            </div>
-            <br />
-            <div>
-                Our goal is to encourage our customers to launch their projects with us by providing a secure and
-                flexible platform at minimal cost. Our metrics and widgets have been carefully designed to ensure that
-                launching with us is a favorable choice when compared to other platforms.
-            </div>
+            {isReadMore && (
+                <>
+                    <br />
+                    <div>
+                        Starksport Launchpad empowers investors and allows quality project creators the ability to
+                        provide token or NFT sales.
+                    </div>
+                    <br />
+                    <div>
+                        Our goal is to encourage our customers to launch their projects with us by providing a secure
+                        and flexible platform at minimal cost. Our metrics and widgets have been carefully designed to
+                        ensure that launching with us is a favorable choice when compared to other platforms.
+                    </div>
+                </>
+            )}
         </div>
     );
 };

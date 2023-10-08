@@ -95,7 +95,7 @@ const FooterBarLeft = () => {
         },
     ];
     return (
-        <div className="flex flex-col justify-center items-start gap-[20px] md:gap-[10px] min-[1200px]:gap-[16px]">
+        <div className="flex flex-col justify-center items-start md:gap-[10px] min-[1200px]:gap-[16px]">
             {itemListLeft.map((item, idx) => (
                 <AnchorLink
                     href={item.href}
@@ -121,7 +121,7 @@ const FooterBarRight = () => {
         },
     ];
     return (
-        <div className="flex flex-col justify-center items-start gap-[20px] md:gap-[10px] min-[1200px]:gap-[16px]">
+        <div className="flex flex-col justify-center items-start md:gap-[10px] min-[1200px]:gap-[16px]">
             {itemListRight.map((item, idx) => (
                 <AnchorLink
                     href={item.href}
@@ -137,11 +137,11 @@ const FooterBarRight = () => {
 
 const FooterHeading = (props) => {
     return (
-        <div className="flex flex-col items-center justify-center gap-[12px] md:!items-start">
+        <div className="flex flex-col items-center justify-center gap-[20px] md:!items-start">
             <a href="/">
                 <img src={icons.offical_logo} alt="logo" className="h-[48px] w-[212.082px]" />
             </a>
-            <div className="font-['Roboto'] text-[16px] font-normal leading-normal text-[#C6C6C6]">
+            <div className="font-['Roboto'] text-[14px] font-normal leading-normal text-[#C6C6C6] md:text-[16px]">
                 support@starksport.finance
             </div>
         </div>
@@ -150,7 +150,7 @@ const FooterHeading = (props) => {
 
 const FooterPolicy = () => {
     return (
-        <div className="font-['Roboto'] text-[16px] font-normal leading-normal text-[#C6C6C6] text-center">
+        <div className="font-['Roboto'] text-[14px] font-normal leading-normal text-[#C6C6C6] text-center md:text-[16px]">
             2023 © Copyright STARKSPORT. All Rights Reserved
         </div>
     );

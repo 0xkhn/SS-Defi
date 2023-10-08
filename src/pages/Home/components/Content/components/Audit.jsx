@@ -3,7 +3,7 @@ import { HeaderComponent } from './HeaderComponent';
 
 export default function Audit() {
     return (
-        <div className="flex w-full flex-col items-center justify-center gap-[60px] overflow-hidden bg-[#07051B] py-[40px] md:py-[60px] md:pb-[100px] min-[1200px]:gap-[80px] min-[1200px]:pb-[236px] min-[1200px]:pt-[120px]">
+        <div className="flex w-full flex-col items-center justify-center gap-[40px] overflow-hidden bg-[#07051B] py-[60px] md:gap-[60px] md:pb-[100px] min-[1200px]:gap-[80px] min-[1200px]:pb-[236px] min-[1200px]:pt-[120px]">
             <HeaderComponent title="AUDIT" subTitle="Audited By" />
             <AuditContent />
         </div>

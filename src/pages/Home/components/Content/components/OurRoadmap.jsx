@@ -13,7 +13,7 @@ const contentStyle = {
 
 export default function OurRoadmap() {
     return (
-        <div className="flex flex-col justify-center gap-[30px] md:gap-[60px] md:mx-[60px] min-[1200px]:gap-[80px] min-[1200px]:mx-[120px]">
+        <div className="flex flex-col justify-center gap-[30px] py-[60px] md:py-0 md:gap-[60px] md:mx-[60px] min-[1200px]:gap-[80px] min-[1200px]:mx-[120px]">
             <HeaderComponent title="ROADMAP" subTitle="Our Roadmap" />
             <div className="max-w-[342px] md:hidden">
                 <RoadmapMobile />
@@ -98,8 +98,10 @@ const RoadmapItem = (props) => {
                         {props.item.quarter} - {props.item.date}
                     </div>
                 </div>
-                <div className="font-['Roboto'] text-start text-[14px] font-normal text-white leading-normal">
-                    {props.item.demoContent}
+                <div className="font-['Roboto'] text-start text-[14px] font-normal text-white leading-normal min-[400px]:w-[200px]">
+                    <span>{props.item.demoContent[0]}</span>
+                    <br />
+                    <span>{props.item.demoContent[1]}</span>
                 </div>
             </div>
         </div>
@@ -110,26 +112,26 @@ const roadmapItemList = [
     {
         quarter: 'Q1',
         date: '2023',
-        demoContent: 'Website Launch & Token Creation',
+        demoContent: ['Website Launch &', 'Token Creation'],
     },
     {
         quarter: 'Q2',
         date: '2023',
-        demoContent: 'Audit & Development of Dapp Beta',
+        demoContent: ['Audit & Development', 'of Dapp Beta'],
     },
     {
         quarter: 'Q3',
         date: '2023',
-        demoContent: 'Starksport Exchange & Marketplace',
+        demoContent: ['Starksport', 'Exchange & Marketplace'],
     },
     {
         quarter: 'Q4',
         date: '2023',
-        demoContent: 'Private Round & Starksport Launchpad',
+        demoContent: ['Private Round &', 'Starksport Launchpad'],
     },
     {
         quarter: 'Q1',
         date: '2024',
-        demoContent: 'Public Round & Starksport Multichain',
+        demoContent: ['Public Round &', 'Starksport Multichain'],
     },
 ];

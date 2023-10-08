@@ -12,6 +12,7 @@ import mediumFooter from './svg/footer/medium.svg';
 import bannerHomepageMobile from './BannerHompage.png';
 import aboutHomepageBanner from './AboutHomepage.png';
 import featureCard from './svg/FeatureCard.svg';
+import featureCardMobile from './svg/FeatureCardMobile.svg';
 import kyc1 from './1_audit.png';
 import kyc2 from './1_sale.png';
 import kyc3 from './1_airdrop.png';
@@ -26,7 +27,7 @@ import BG_OFFICIAL from './svg/background_offical.svg';
 import CERTIK_LOGO from './certik_logo.png';
 import STARKGUARDIAN_LOGO from './starkguar_logo.png';
 import ECLIP_SHADOW from './svg/eclipse_shadow.svg';
-import ECOSYSTEM_MOBILE from './ecosystem_mobile.png';
+import ECOSYSTEM_MOBILE from './ecosystem_mobile.svg';
 import ECOSYSTEM_MD from './ecosystem_md.svg';
 import ECOSYSTEM_DESKTOP from './ecosystem_desktop.png';
 
@@ -67,6 +68,7 @@ const icons = {
         bannerHomepageMobile,
         aboutHomepageBanner,
         featureCard,
+        featureCardMobile,
         kyc1,
         kyc2,
         kyc3,

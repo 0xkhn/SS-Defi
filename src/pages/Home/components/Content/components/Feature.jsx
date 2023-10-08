@@ -39,17 +39,22 @@ const FeatureCard = () => {
         <div className="flex flex-wrap justify-center items-center gap-[30px] md:w-[768px] min-[1200px]:w-[960px] min-[1200px]:gap-[40px] min-[1440px]:w-[1200px] min-[1440px]:grid min-[1440px]:grid-cols-4">
             {featureCardItems.map((item, idx) => (
                 <div
-                    className="relative flex h-[345px] w-[350px] items-end md:max-w-[309px] min-[1200px]:max-w-[270px]"
+                    className="relative flex h-[300px] md:h-[345px] w-[350px] items-end md:max-w-[309px] min-[1200px]:max-w-[270px]"
                     key={idx}
                 >
                     <div className="card-hover relative flex justify-center">
                         <img
                             src={icons.homepage.featureCard}
                             alt="banner"
-                            className="rounded-[24px] md:rounded-[16px]"
+                            className="hidden md:block rounded-[24px] md:rounded-[16px]"
                         />
-                        <div className="absolute bottom-[80px] flex h-[230px] w-[318px] flex-col items-center justify-center gap-[36px]">
-                            <div className="test h-[180px] w-[180px]">
+                        <img
+                            src={icons.homepage.featureCardMobile}
+                            alt="banner"
+                            className="md:hidden rounded-[24px] md:rounded-[16px]"
+                        />
+                        <div className="absolute bottom-[50px] md:bottom-[80px] flex h-[230px] w-[318px] flex-col items-center justify-center gap-[36px]">
+                            <div className="h-[180px] w-[180px]">
                                 <img src={item.icon} alt="banner" />
                             </div>
                             <div className="inline-flex flex-col items-center gap-[12px]">

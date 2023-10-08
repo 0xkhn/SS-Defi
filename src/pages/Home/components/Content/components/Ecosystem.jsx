@@ -44,7 +44,7 @@ const EcosystemCard = ({ icon, title, description }) => {
 const EcosystemListCardMobile = () => {
     return (
         <div className="flex flex-col items-center justify-center gap-[20px]">
-            {ecosystemCardItems.map((item, idx) => (
+            {ecosystemCardItemsMobile.map((item, idx) => (
                 <EcosystemCard key={idx} icon={item.icon} title={item.title} description={item.subtitle} />
             ))}
         </div>
@@ -54,14 +54,52 @@ const EcosystemListCardMobile = () => {
 const EcosystemListCardDesktop = () => {
     return (
         <div className="flex flex-wrap content-center items-center justify-center gap-[15px] md:max-w-[648px]">
-            {ecosystemCardItems.map((item, idx) => (
+            {ecosystemCardItemsDesktop.map((item, idx) => (
                 <EcosystemCard key={idx} icon={item.icon} title={item.title} description={item.subtitle} />
             ))}
         </div>
     );
 };
 
-const ecosystemCardItems = [
+const ecosystemCardItemsMobile = [
+    {
+        icon: icons.ecosystem.launchpad,
+        title: 'Starksport Launchpad',
+        subtitle: 'Allows quality crypto projects to conduct the token sale',
+    },
+    {
+        icon: icons.ecosystem.exchange,
+        title: 'Starksport Exchange',
+        subtitle: 'Swap, earn, and provide liquidity to get sharing fees',
+    },
+    {
+        icon: icons.ecosystem.marketplace,
+        title: 'Starksport Marketplace',
+        subtitle: 'Trade, lend or borrow unique digital items and make it valuable',
+    },
+    {
+        icon: icons.ecosystem.community,
+        title: 'Starksport Community',
+        subtitle: 'Active, supportive and loyal',
+    },
+    {
+        icon: icons.ecosystem.token,
+        title: 'Starksport Token',
+        subtitle: 'Native token with wonderful utilities',
+    },
+    {
+        icon: icons.ecosystem.nft,
+        title: 'Starksport NFT',
+        subtitle: 'A limited collection belongs to early users with huge benefits',
+    },
+    {
+        icon: icons.ecosystem.dao,
+        title: 'Starksport DAO',
+        subtitle: 'Empower the community to vote proposals',
+    },
+];
+
+const ecosystemCardItemsDesktop = [
     {
         icon: icons.ecosystem.launchpad,
         title: 'Starksport Launchpad',
