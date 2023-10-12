@@ -36,10 +36,10 @@ const FeatureCard = () => {
     ];
 
     return (
-        <div className="flex flex-wrap justify-center items-center gap-[30px] md:w-[768px] min-[1200px]:w-[960px] min-[1200px]:gap-[40px] min-[1440px]:w-[1200px] min-[1440px]:grid min-[1440px]:grid-cols-4">
+        <div className="flex flex-wrap justify-center items-center gap-[30px] max-[480px]:px-[20px] md:w-[768px] min-[1200px]:w-[960px] min-[1200px]:gap-[40px] min-[1440px]:w-[1200px] min-[1440px]:grid min-[1440px]:grid-cols-4">
             {featureCardItems.map((item, idx) => (
                 <div
-                    className="relative flex h-[300px] md:h-[345px] w-[350px] items-end md:max-w-[309px] min-[1200px]:max-w-[270px]"
+                    className="relative flex h-[300px] md:h-[345px] w-[350px] items-end max-[480px]:w-auto max-[480px]:max-w-[350px] md:max-w-[309px] min-[1200px]:max-w-[270px]"
                     key={idx}
                 >
                     <div className="card-hover relative flex justify-center">
@@ -57,11 +57,11 @@ const FeatureCard = () => {
                             <div className="h-[180px] w-[180px]">
                                 <img src={item.icon} alt="banner" />
                             </div>
-                            <div className="inline-flex flex-col items-center gap-[12px]">
-                                <div className="text-center font-['Roboto'] text-[16px] font-bold text-white md:text-[20px]">
+                            <div className="inline-flex flex-col items-center gap-[12px] max-[480px]:mx-[20px]">
+                                <div className="text-center font-['Roboto'] text-sm min-[350px]:text-[16px] font-bold text-white md:text-[20px]">
                                     {item.title}
                                 </div>
-                                <div className="text-center font-['Roboto'] text-[14px] font-normal text-[#C6C6C6] md:max-w-[268px] md:text-[16px] min-[1200px]:px-[20px]">
+                                <div className="text-center font-['Roboto'] text-xs min-[350px]:text-[14px] font-normal text-[#C6C6C6] md:max-w-[268px] md:text-[16px] min-[1200px]:px-[20px]">
                                     {item.subtitle}
                                 </div>
                             </div>

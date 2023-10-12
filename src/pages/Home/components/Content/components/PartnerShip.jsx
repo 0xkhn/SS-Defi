@@ -4,7 +4,7 @@ import { HeaderComponent } from './HeaderComponent';
 export default function PartnerShip() {
     return (
         <div className="relative flex flex-col gap-[30px] md:gap-[40px] md:mx-[60px] min-[1200px]:mx-[120px] min-[1200px]:max-w-[1200px] min-[1200px]:gap-[80px]">
-            <HeaderComponent title="PARTNERSHIP" subTitle="Our Partners & Collabs" />
+            <HeaderComponent title="PARTNERSHIP" subTitle="Partners & Supports" />
             <div className="min-[1200px]:hidden">
                 <ParterContentMobile />
             </div>
@@ -32,6 +32,10 @@ const partnersFull = [
     {
         image: icons.partners.OPSIDE,
         href: 'https://opside.network/',
+    },
+    {
+        image: icons.partners.HELA,
+        href: 'https://helalabs.com/',
     },
     {
         image: icons.partners.TASKON,
@@ -66,10 +70,6 @@ const partnersFull = [
         href: 'https://carmine.finance/',
     },
     {
-        image: icons.partners.MISES,
-        href: 'https://www.mises.site/',
-    },
-    {
         image: icons.partners.LINKE,
         href: 'https://link3.to/',
     },
@@ -92,6 +92,14 @@ const partnersFull = [
     {
         image: icons.partners.OXGEN,
         href: 'https://twitter.com/0xgen_io',
+    },
+    {
+        image: icons.partners.MAR3,
+        href: 'https://mar3.ai/homepage',
+    },
+    {
+        image: icons.partners.ZNS,
+        href: 'https://znsconnect.io/',
     },
 ];
 

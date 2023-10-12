@@ -48,7 +48,6 @@ import GALXE from './partners/GALXE.svg';
 import SITHSWAP from './partners/SITHSWAP.svg';
 import TRANTOR from './partners/TRANTOR.svg';
 import CARMINE from './partners/CARMINE.svg';
-import MISES from './partners/MISES.svg';
 import LINKE from './partners/LINKE.svg';
 import METABIT from './partners/METABIT.svg';
 import TASKON from './partners/TASKON.svg';
@@ -62,6 +61,9 @@ import BLOCKLIT from './partners/BLOCKLIT.svg';
 import KLEINLABS from './partners/KLEINLABS.svg';
 import WEB3NOVA from './partners/WEB3NOVA.svg';
 import OXGEN from './partners/OXGEN.svg';
+import HELA from './partners/HELA.svg';
+import MAR3 from './partners/MAR3.svg';
+import ZNS from './partners/ZNS.svg';
 
 const icons = {
     offical_logo,
@@ -110,7 +112,6 @@ const icons = {
         SITHSWAP,
         TRANTOR,
         CARMINE,
-        MISES,
         LINKE,
         METABIT,
         TASKON,
@@ -124,6 +125,9 @@ const icons = {
         KLEINLABS,
         WEB3NOVA,
         OXGEN,
+        HELA,
+        MAR3,
+        ZNS,
     },
 };
 

@@ -166,7 +166,7 @@ const SocialCard = () => {
         {
             id: 'discord',
             icon: icons.homepage.discordFooter,
-            link: 'https://discord.gg/starksport',
+            link: 'https://discord.gg/starksports',
         },
         {
             id: 'twitter',
