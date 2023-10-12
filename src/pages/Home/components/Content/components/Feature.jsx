@@ -51,7 +51,7 @@ const FeatureCard = () => {
                         <img
                             src={icons.homepage.featureCardMobile}
                             alt="banner"
-                            className="md:hidden rounded-[24px] md:rounded-[16px]"
+                            className="md:hidden min-[480px]:rounded-[24px] md:rounded-[16px]"
                         />
                         <div className="absolute bottom-[50px] md:bottom-[80px] flex h-[230px] w-[318px] flex-col items-center justify-center gap-[36px]">
                             <div className="h-[180px] w-[180px]">
