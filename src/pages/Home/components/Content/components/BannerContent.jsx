@@ -38,8 +38,8 @@ const BannerContent = () => {
                 We provide exclusive services including IDO Launchpad, NFT Auction, Marketplace and Exchange.
             </div>
             {/* <CardInfo /> */}
-            <div className="flex w-full items-center justify-center gap-[20px] px-[20px] md:px-0 md:flex-row min-[1200px]:justify-start">
-                <div className="">
+            <div className="flex w-full items-center justify-center gap-[20px] px-[20px] flex-wrap md:px-0 md:flex-row min-[1200px]:justify-start">
+                <div className="max-[368px]:w-full">
                     {/* <LaunchAppButton styleButton="py-[12px] px-[10px] md:px-[24px] rounded-[16px] h-[48px] w-[135px] md:w-[175px]" /> */}
                     <a href="https://marketplace.starksport.finance/events" target="_blank" rel="noreferrer">
                         <button
@@ -47,8 +47,8 @@ const BannerContent = () => {
                                 background: 'linear-gradient(135deg, #24C3BC 0%, #ADFFFB 100%)',
                             }}
                             className={twMerge(
-                                'button-hover-1 h-[36px] items-center justify-center gap-[4px] rounded-[12px] border-0 px-[12px] py-[6px] max-[340px]:hidden',
-                                'py-[12px] px-[24px] rounded-[16px] h-[48px] w-[175px]',
+                                'button-hover-1 h-[36px] items-center justify-center gap-[4px] rounded-[12px] border-0 px-[12px] py-[6px]',
+                                'py-[12px] px-[24px] rounded-[16px] h-[48px] w-full min-[368px]:w-[135px] md:w-[189px]',
                             )}
                             // onClick={onClick}
                         >
@@ -58,7 +58,7 @@ const BannerContent = () => {
                         </button>
                     </a>
                 </div>
-                <div className="">
+                <div className="max-[368px]:w-full">
                     <BannerButtonDocument />
                 </div>
             </div>
@@ -72,7 +72,7 @@ const BannerButtonDocument = () => {
             href="https://starksport.gitbook.io/starksport/"
             target="_blank"
             rel="noreferrer"
-            className="button-hover-3 flex items-center justify-center gap-[4px] self-stretch rounded-[16px] border-[2px] border-[#24C3BC] bg-transparent px-[20px] py-[12px] w-[135px] md:w-[189px]"
+            className="button-hover-3 button-width flex items-center justify-center gap-[4px] self-stretch rounded-[16px] border-[2px] border-[#24C3BC] bg-transparent px-[20px] py-[12px] w-full min-[368px]:w-[135px] md:w-[189px]"
         >
             <div className="font-['Roboto'] text-[16px] font-bold text-white">Documentation</div>
         </a>
