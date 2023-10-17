@@ -1,3 +1,4 @@
+import { twMerge } from 'tailwind-merge';
 import LaunchAppButton from '../../Navbar/components/LaunchAppButton';
 import { OfficalBanner } from './Banner';
 
@@ -39,7 +40,23 @@ const BannerContent = () => {
             {/* <CardInfo /> */}
             <div className="flex w-full items-center justify-center gap-[20px] px-[20px] md:px-0 md:flex-row min-[1200px]:justify-start">
                 <div className="">
-                    <LaunchAppButton styleButton="py-[12px] px-[10px] md:px-[24px] rounded-[16px] h-[48px] w-[135px] md:w-[175px]" />
+                    {/* <LaunchAppButton styleButton="py-[12px] px-[10px] md:px-[24px] rounded-[16px] h-[48px] w-[135px] md:w-[175px]" /> */}
+                    <a href="https://marketplace.starksport.finance/events" target="_blank" rel="noreferrer">
+                        <button
+                            style={{
+                                background: 'linear-gradient(135deg, #24C3BC 0%, #ADFFFB 100%)',
+                            }}
+                            className={twMerge(
+                                'button-hover-1 h-[36px] items-center justify-center gap-[4px] rounded-[12px] border-0 px-[12px] py-[6px] max-[340px]:hidden',
+                                'py-[12px] px-[24px] rounded-[16px] h-[48px] w-[175px]',
+                            )}
+                            // onClick={onClick}
+                        >
+                            <span className={twMerge("font-['Roboto'] text-[16px] font-bold text-[#1C1A2D]")}>
+                                Mint Now
+                            </span>
+                        </button>
+                    </a>
                 </div>
                 <div className="">
                     <BannerButtonDocument />
