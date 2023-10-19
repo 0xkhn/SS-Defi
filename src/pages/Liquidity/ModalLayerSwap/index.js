@@ -1,9 +1,22 @@
 import 'antd/dist/antd.css';
 import './style.scss';
 import Modal from 'antd/lib/modal/Modal';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, FormControl, InputLabel, MenuItem, Select, TextField, Grid } from '@mui/material';
 import { useCurrencies, useNetworks, useRate, useCreateSwap } from './hooks';
+import styled from 'styled-components';
+
+const WhiteBorderTextField = styled(TextField)`
+    & label.Mui-focused {
+        color: white;
+    }
+    & .MuiOutlinedInput-root {
+        border: 1px solid white;
+        &.Mui-focused fieldset {
+            border-color: white;
+        }
+    }
+`;
 
 const ModalLayerSwap = (props) => {
     const { isShow, setIsShow } = props;
@@ -17,7 +30,19 @@ const ModalLayerSwap = (props) => {
     const [sourceCurrency, setSourceCurrency] = useState('');
     const [destinationCurrency, setDestinationCurrency] = useState('');
 
-    const [address, setAddress] = useState('0xe688b84b23f322a994A53dbF8E15FA82CDB71127');
+    const [address, setAddress] = useState('0x03240D516052F7F9587719e20E91889FAb7417E115FDC778E9878A532212B27A');
+
+    useEffect(() => {
+        if (source && destination && sourceCurrency && destinationCurrency) {
+            getRate({
+                source: source,
+                destination: destination,
+                sourceAsset: sourceCurrency,
+                destinationAsset: destinationCurrency,
+                refuel: false,
+            });
+        }
+    }, [source]);
 
     const handleSourceChange = (event) => {
         updateCurrencies({
@@ -139,10 +164,25 @@ const ModalLayerSwap = (props) => {
                             <Grid item xs={3}>
                                 <form onSubmit={handleSubmit}>
                                     <Grid container direction={'column'} spacing={2}>
-                                        <Grid color={'white'} item>
+                                        <Grid item>
                                             <FormControl fullWidth>
                                                 <InputLabel id="source-label">Source</InputLabel>
                                                 <Select
+                                                    sx={{
+                                                        color: 'white',
+                                                        '.MuiOutlinedInput-notchedOutline': {
+                                                            borderColor: 'rgba(228, 219, 233, 0.25)',
+                                                        },
+                                                        '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                                            borderColor: 'rgba(228, 219, 233, 0.25)',
+                                                        },
+                                                        '&:hover .MuiOutlinedInput-notchedOutline': {
+                                                            borderColor: 'rgba(228, 219, 233, 0.25)',
+                                                        },
+                                                        '.MuiSvgIcon-root ': {
+                                                            fill: 'white !important',
+                                                        },
+                                                    }}
                                                     labelId="source-label"
                                                     id="source"
                                                     value={source}
@@ -159,10 +199,25 @@ const ModalLayerSwap = (props) => {
                                                 </Select>
                                             </FormControl>
                                         </Grid>
-                                        <Grid item>
+                                        {/* <Grid item>
                                             <FormControl fullWidth>
                                                 <InputLabel id="destination-label">Destination</InputLabel>
                                                 <Select
+                                                    sx={{
+                                                        color: 'white',
+                                                        '.MuiOutlinedInput-notchedOutline': {
+                                                            borderColor: 'rgba(228, 219, 233, 0.25)',
+                                                        },
+                                                        '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                                            borderColor: 'rgba(228, 219, 233, 0.25)',
+                                                        },
+                                                        '&:hover .MuiOutlinedInput-notchedOutline': {
+                                                            borderColor: 'rgba(228, 219, 233, 0.25)',
+                                                        },
+                                                        '.MuiSvgIcon-root ': {
+                                                            fill: 'white !important',
+                                                        },
+                                                    }}
                                                     labelId="destination-label"
                                                     id="destination"
                                                     value={destination}
@@ -178,12 +233,31 @@ const ModalLayerSwap = (props) => {
                                                         ))}
                                                 </Select>
                                             </FormControl>
-                                        </Grid>
+                                        </Grid> */}
                                         <Grid item>
-                                            <TextField label="Amount" value={amount} onChange={handleAmountChange} />
+                                            <WhiteBorderTextField
+                                                label="Amount"
+                                                value={amount}
+                                                onChange={handleAmountChange}
+                                            />
                                             <FormControl style={{ minWidth: 80 }}>
                                                 <InputLabel id="source-select-label">Source Currency</InputLabel>
                                                 <Select
+                                                    sx={{
+                                                        color: 'white',
+                                                        '.MuiOutlinedInput-notchedOutline': {
+                                                            borderColor: 'rgba(228, 219, 233, 0.25)',
+                                                        },
+                                                        '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                                            borderColor: 'rgba(228, 219, 233, 0.25)',
+                                                        },
+                                                        '&:hover .MuiOutlinedInput-notchedOutline': {
+                                                            borderColor: 'rgba(228, 219, 233, 0.25)',
+                                                        },
+                                                        '.MuiSvgIcon-root ': {
+                                                            fill: 'white !important',
+                                                        },
+                                                    }}
                                                     labelId="source-select-label"
                                                     id="source-currency-select"
                                                     value={sourceCurrency}
@@ -199,6 +273,21 @@ const ModalLayerSwap = (props) => {
                                             <FormControl style={{ minWidth: 80 }}>
                                                 <InputLabel id="currency-select-label">Desination Currency</InputLabel>
                                                 <Select
+                                                    sx={{
+                                                        color: 'white',
+                                                        '.MuiOutlinedInput-notchedOutline': {
+                                                            borderColor: 'rgba(228, 219, 233, 0.25)',
+                                                        },
+                                                        '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                                            borderColor: 'rgba(228, 219, 233, 0.25)',
+                                                        },
+                                                        '&:hover .MuiOutlinedInput-notchedOutline': {
+                                                            borderColor: 'rgba(228, 219, 233, 0.25)',
+                                                        },
+                                                        '.MuiSvgIcon-root ': {
+                                                            fill: 'white !important',
+                                                        },
+                                                    }}
                                                     labelId="destination-select-label"
                                                     id="destination-currency-select"
                                                     value={destinationCurrency}
@@ -239,7 +328,7 @@ const ModalLayerSwap = (props) => {
                                             {rate?.fee_amount && <p>Fee: {rate.fee_amount}</p>}
                                         </Grid>
                                         <Grid item>
-                                            <TextField
+                                            <WhiteBorderTextField
                                                 fullWidth
                                                 label="Address"
                                                 value={address}
