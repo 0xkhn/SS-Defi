@@ -372,7 +372,7 @@ const FormSwap = ({ setHistoricalPrices, setVol, setPairAddr }) => {
     ];
 
     const currentPath = window.location.pathname;
-
+    console.log(tokens[Field.INPUT]?.symbol);
     return (
         <div className="form-wrapper col gap-10" style={{ gap: 2 }}>
             {/* Select token modal */}
@@ -490,6 +490,11 @@ const FormSwap = ({ setHistoricalPrices, setVol, setPairAddr }) => {
                                     handleTokenShow(Field.INPUT);
                                 }}
                             >
+                                {/* {tokens[Field.INPUT]?.symbol === 'ETH' && (
+                                    <button>
+                                        <p>Swap from another network</p>
+                                    </button>
+                                )} */}
                                 <img
                                     alt={tokens[Field.INPUT]?.symbol ?? '?'}
                                     src={TOKEN_ICON_LIST[chainId]?.[tokens[Field.INPUT]?.address] ?? UNKNOWN_TOKEN_ICON}

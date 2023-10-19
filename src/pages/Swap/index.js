@@ -12,6 +12,7 @@ import factoryAbi from '../../assets/abi/factory';
 import pairAbi from '../../assets/abi/pair';
 import router from '../../assets/abi/router.js';
 import ModalSettingSwap from '../../components/ModalSettingSwap';
+import ModalLayerSwap from '../Liquidity/ModalLayerSwap';
 import useModalSettingSwap from '../../components/ModalSettingSwap/useModalSettingSwap';
 import useCurrentAccount from '../../hooks/useCurrentAccount';
 
@@ -505,6 +506,7 @@ const getCurrentDateInUTC = () => {
 const FormSwap = ({ historicalPrices, setHistoricalPrices, setVol }) => {
     const { account, address, status } = useCurrentAccount();
     const [isShow, setIsShow] = useState(false);
+    const [isLayerShow, setIsLayerShow] = useState(false);
     const [percent, setPercent] = useState(100);
     const navigate = useNavigate();
 
@@ -863,6 +865,7 @@ const FormSwap = ({ historicalPrices, setHistoricalPrices, setVol }) => {
                 mockDataTokenTest={mockDataTokenTest}
                 typeModal={typeModal}
             />
+            <ModalLayerSwap isShow={isLayerShow} setIsShow={setIsLayerShow} />
             <ModalSettingSwap isShowing={isShowingSetting} hide={toggleSettingSwap} />
 
             <div className="row j-between" style={{ margin: '10px 0' }}>
@@ -908,20 +911,29 @@ const FormSwap = ({ historicalPrices, setHistoricalPrices, setVol }) => {
                             onChange={handleToken0InputAmountChange}
                         />
                         <div>
-                            <div
-                                className="row gap-5 option-wrapper a-center p-10"
-                                onClick={() => {
-                                    setTypeModal(1);
-                                    setIsShow(true);
-                                }}
-                            >
-                                <img src={token0.icon} style={{ height: 30, width: 30 }} alt="eth_icon" />
-                                <h5>{token0.name}</h5>
-                                <img
-                                    src={assets.svg.down_arrow}
-                                    style={{ height: 20, width: 20 }}
-                                    alt="down_arrow_icon"
-                                />
+                            <div className="row gap-5 a-center">
+                                {status === 'connected' &&
+                                    token0.name === 'ETH' &&
+                                    inputToken0Ref > token0BalanceAmount && (
+                                        <button onClick={() => setIsLayerShow(true)} className="btn-percent-select">
+                                            <p>{'Layerswap'}</p>
+                                        </button>
+                                    )}
+                                <div
+                                    className="row gap-5 option-wrapper a-center p-10"
+                                    onClick={() => {
+                                        setTypeModal(1);
+                                        setIsShow(true);
+                                    }}
+                                >
+                                    <img src={token0.icon} style={{ height: 30, width: 30 }} alt="eth_icon" />
+                                    <h5>{token0.name}</h5>
+                                    <img
+                                        src={assets.svg.down_arrow}
+                                        style={{ height: 20, width: 20 }}
+                                        alt="down_arrow_icon"
+                                    />
+                                </div>
                             </div>
                             <div className="wrapper-percent">
                                 {percentNumbers.map((item, index) => {
@@ -974,7 +986,7 @@ const FormSwap = ({ historicalPrices, setHistoricalPrices, setVol }) => {
             </div>
 
             <div className="input-wrapper">
-                <div style={{ padding: 12, marginTop: 10 }}>
+                <div style={{ padding: 12 }}>
                     <div className="row">
                         <h4 style={{ margin: 'auto' }}>~ {token1OutputDisplayAmount}</h4>
                         <div>

@@ -42,7 +42,7 @@ function useWindowSize() {
 }
 
 const App = () => {
-    console.clear();
+    // console.clear();
 
     const dispatch = useDispatch();
 
