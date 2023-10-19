@@ -4,7 +4,7 @@ import { HeaderComponent } from './HeaderComponent';
 export default function Feature() {
     return (
         <div className="relative flex flex-col gap-[30px] min-[1200px]:gap-[80px]">
-            <HeaderComponent title="FEATURES" subTitle="OUR FEATURES" />
+            <HeaderComponent title="FEATURES" subTitle="Our Features" />
             <FeatureCard />
             <div id="features" className="absolute top-[-200px]"></div>
         </div>
@@ -61,7 +61,7 @@ const FeatureCard = () => {
                                 <div className="text-center font-['Roboto'] text-sm min-[350px]:text-[16px] font-bold text-white md:text-[20px]">
                                     {item.title}
                                 </div>
-                                <div className="text-center font-['Roboto'] text-xs min-[350px]:text-[14px] font-normal text-[#C6C6C6] md:max-w-[268px] md:text-[16px] min-[1200px]:px-[20px]">
+                                <div className="text-center font-['Roboto'] text-xs min-[350px]:text-[14px] font-normal text-[#C6C6C6] leading-6 md:max-w-[268px] md:text-[16px] min-[1200px]:px-[20px]">
                                     {item.subtitle}
                                 </div>
                             </div>

@@ -64,6 +64,9 @@ import OXGEN from './partners/OXGEN.svg';
 import HELA from './partners/HELA.svg';
 import MAR3 from './partners/MAR3.svg';
 import ZNS from './partners/ZNS.svg';
+import RAMBOX from './partners/RAMBOX.svg';
+import OWL from './partners/OWL.svg';
+import DECIBLING from './partners/DECIBLING.svg';
 
 const icons = {
     offical_logo,
@@ -128,6 +131,9 @@ const icons = {
         HELA,
         MAR3,
         ZNS,
+        RAMBOX,
+        OWL,
+        DECIBLING,
     },
 };
 

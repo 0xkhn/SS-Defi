@@ -101,6 +101,18 @@ const partnersFull = [
         image: icons.partners.ZNS,
         href: 'https://znsconnect.io/',
     },
+    {
+        image: icons.partners.RAMBOX,
+        href: 'https://rambox.io/#/home',
+    },
+    {
+        image: icons.partners.OWL,
+        href: 'https://twitter.com/owlweb3',
+    },
+    {
+        image: icons.partners.DECIBLING,
+        href: 'https://decibling.com/',
+    },
 ];
 
 const ParterContentMobile = () => {
