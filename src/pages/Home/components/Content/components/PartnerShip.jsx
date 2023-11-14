@@ -173,9 +173,9 @@ const SponserCardMockup = ({ icon, href }) => {
             href={href}
             target="_blank"
             rel="noreferrer"
-            className="partner-card flex h-[80px] w-[160px] items-center justify-center rounded-[16px] border-[0.5px] border-[#C6C6C6] bg-[#07051B] max-[350px]:w-[150px] md:h-[100px] md:w-[200px]"
+            className="partner-card flex h-[80px] w-[160px] items-center justify-center rounded-[16px] border-[0.5px] border-[#C6C6C6] bg-[#07051B] max-[350px]:w-[150px] md:h-[100px] md:w-[208px] md:py-[10px] md:px-6"
         >
-            <img src={icon} alt="partner" className="w-[120px] h-[60px] md:w-[160px] md:h-[80px]" />
+            <img src={icon} alt="partner" className="w-[120px] h-[60px] md:w-[160px] md:h-[80px] md:rounded-2xl" />
         </a>
     );
 };
