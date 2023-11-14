@@ -113,6 +113,34 @@ const partnersFull = [
         image: icons.partners.DECIBLING,
         href: 'https://decibling.com/',
     },
+    {
+        image: icons.partners.BASALT,
+        href: 'https://basaltcoin.com/',
+    },
+    {
+        image: icons.partners.REI,
+        href: 'https://www.rei.network/',
+    },
+    {
+        image: icons.partners.POKERDAO,
+        href: 'https://pokerdao.xyz/',
+    },
+    {
+        image: icons.partners.SCALEBIT,
+        href: 'https://www.scalebit.xyz/',
+    },
+    {
+        image: icons.partners.RESE,
+        href: 'https://www.rese.social/',
+    },
+    {
+        image: icons.partners.HYPER,
+        href: 'https://www.hyperpay.tech/',
+    },
+    {
+        image: icons.partners.JUICYBET,
+        href: 'https://juicybet.net/',
+    },
 ];
 
 const ParterContentMobile = () => {

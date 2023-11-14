@@ -67,6 +67,13 @@ import ZNS from './partners/ZNS.svg';
 import RAMBOX from './partners/RAMBOX.svg';
 import OWL from './partners/OWL.svg';
 import DECIBLING from './partners/DECIBLING.svg';
+import BASALT from './partners/BASALT.svg';
+import REI from './partners/REI.svg';
+import POKERDAO from './partners/POKER_DAO.svg';
+import SCALEBIT from './partners/SCALE_BIT.svg';
+import RESE from './partners/RESE.svg';
+import HYPER from './partners/HYPER.svg';
+import JUICYBET from './partners/JUICYBET.svg';
 
 const icons = {
     offical_logo,
@@ -134,6 +141,13 @@ const icons = {
         RAMBOX,
         OWL,
         DECIBLING,
+        BASALT,
+        REI,
+        POKERDAO,
+        SCALEBIT,
+        RESE,
+        HYPER,
+        JUICYBET,
     },
 };
 
